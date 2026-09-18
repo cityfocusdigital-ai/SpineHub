@@ -6,7 +6,7 @@ const services = [
   {
     title: "Spine Rehabilitation",
     description: "For people experiencing back pain, neck pain, sciatica, stiffness, disc-related symptoms, postural strain or reduced spinal movement. Care begins with assessment and may include education, mobility work, graded strengthening, neural mobility, hands-on therapy and suitable technology.",
-    image: "https://images.unsplash.com/photo-1544367563-12123d8965cd?auto=format&fit=crop&q=80&w=800" // Spine/Yoga
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800" // Spine Care
   },
   {
     title: "Joint & Sports Rehabilitation",

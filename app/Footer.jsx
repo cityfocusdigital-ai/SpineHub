@@ -22,22 +22,24 @@ export default function MedicalFooter() {
   ];
 
   const specialties = [
-    { name: 'Spine & Disc Care' },
-    { name: 'Neck, Back & Sciatica Pain' },
-    { name: 'Joint & Sports Injury' },
-    { name: 'Chiropractic & Osteopathy' },
-    { name: 'Ozone (O₃) Therapy' },
-    { name: 'Regenerative Therapy' },
-    { name: 'Neurological Rehabilitation' },
+    { name: 'Spine & Disc Care', href: '/services' },
+    { name: 'Neck, Back & Sciatica Pain', href: '/services' },
+    { name: 'Joint & Sports Injury', href: '/services' },
+    { name: 'Chiropractic & Osteopathy', href: '/services' },
+    { name: 'Ozone (O₃) Therapy', href: '/services' },
+    { name: 'Regenerative Therapy', href: '/services' },
+    { name: 'Neurological Rehabilitation', href: '/services' },
   ];
 
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Services & Therapies', href: '/services' },
-    { name: 'Meet Doctor', href: '/profile' },
+    { name: 'Patient Recovery Journey', href: '/patient-journey' },
+    { name: 'Conditions We Treat', href: '/conditions' },
+    { name: 'Technology & Facilities', href: '/technology' },
+    { name: 'Meet Doctor', href: '/about/profile' },
     { name: 'Patient Testimonials', href: '/testimonials' },
-    { name: 'Book Appointment', href: '/enquiry-form' },
     { name: 'Contact Us', href: '/contact' },
   ];
 
@@ -61,7 +63,7 @@ export default function MedicalFooter() {
 
   return (
     <footer className="relative bg-[#000000] font-sans text-white overflow-hidden">
-      
+
       {/* Background Decorative Radial Gradient with Classic Blue (#0f4c81) Highlights */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,#0f4c81_0%,transparent_60%)] opacity-50" />
       <div className="pointer-events-none absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]" />
@@ -74,9 +76,9 @@ export default function MedicalFooter() {
         className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-8"
       >
         {/* Pre-Footer Banner styled in Classic Blue Gradient */}
-     
+
         {/* --- 1. CTA BANNER (OUTSIDE FOOTER GRID) --- */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -84,23 +86,23 @@ export default function MedicalFooter() {
           className="relative mb-20 overflow-hidden rounded-3xl border border-blue-500/30 shadow-2xl shadow-blue-900/40"
         >
           {/* Gradient Background for CTA */}
-       <div className="bg-[#142a62]" />
-          
+          <div className="bg-[#142a62]" />
+
           {/* Decorative Glow inside CTA */}
-          
+
 
           <div className="relative flex flex-col lg:flex-row items-center justify-between gap-8 p-8 md:p-12 bg-[#142a62] ">
-            
+
             <div className="max-w-2xl space-y-4 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-blue-400 backdrop-blur-md">
                 <ShieldCheck size={14} />
                 <span>Trusted Spine Care</span>
               </div>
-              
+
               <h3 className="text-3xl font-extrabold text-white sm:text-4xl leading-tight">
                 Ready to Live a <span className="text-transparent bg-clip-text bg-[#f5a70b]">Pain-Free Life?</span>
               </h3>
-              
+
               <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Schedule your comprehensive spinal evaluation today. Advanced non-surgical treatments customized for your recovery journey.
               </p>
@@ -117,15 +119,14 @@ export default function MedicalFooter() {
                 <span>Call Now</span>
               </motion.a>
 
-              <motion.button
-                whileHover={{ scale: 1.02, boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)" }}
-                whileTap={{ scale: 0.98 }}
+              <Link
+                href="/contact"
                 className="flex-1 lg:flex-none inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-sm font-bold text-white shadow-lg shadow-blue-600/20 transition-all hover:bg-blue-500"
               >
                 <CalendarCheck size={18} />
                 Book Appointment
                 <ArrowRight size={16} className="opacity-70" />
-              </motion.button>
+              </Link>
             </div>
           </div>
         </motion.div>
@@ -137,8 +138,8 @@ export default function MedicalFooter() {
           <motion.div variants={itemVariants} className="space-y-6 lg:col-span-4">
             <Link href="/" className="inline-block group">
               <div className="flex items-center gap-3.5">
-        
-                { <Image src="/aditya-logo.jpg" alt="Aditya Spine Logo" width={100} height={100} className=" w-auto  object-contain" /> }
+
+                {<Image src="/aditya-logo.jpg" alt="Aditya Spine Logo" width={100} height={100} className=" w-auto  object-contain" />}
 
               </div>
             </Link>
@@ -172,7 +173,7 @@ export default function MedicalFooter() {
             <ul className="space-y-3">
               {specialties.map((item) => (
                 <li key={item.name}>
-                  <Link href="#" className="group flex items-center justify-between text-sm text-white transition-colors hover:text-white">
+                  <Link href={item.href || '/services'} className="group flex items-center justify-between text-sm text-white transition-colors hover:text-[#c5973e]">
                     <span className="flex items-center gap-2">
                       <ChevronRight size={14} className="text-white transition-transform group-hover:translate-x-1 group-hover:text-[#c5973e]" />
                       {item.name}
@@ -235,16 +236,16 @@ export default function MedicalFooter() {
               </div>
 
               <div className="grid grid-cols-2 gap-2 pt-2">
-                <a 
-                  href="mailto:adityaspinerehab@gmail.com" 
+                <a
+                  href="mailto:adityaspinerehab@gmail.com"
                   className="flex items-center justify-center gap-1.5 rounded-xl bg-white/10 border border-white/10 py-2.5 text-xs font-semibold text-white transition-all hover:bg-[#0f4c81] hover:border-[#0f4c81]"
                 >
                   <Mail size={14} className="text-[#c5973e]" /> Email
                 </a>
-                <a 
-                  href="https://www.adityaspinerehab.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://www.adityaspinerehab.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center gap-1.5 rounded-xl bg-white/10 border border-white/10 py-2.5 text-xs font-semibold text-white transition-all hover:bg-[#0f4c81] hover:border-[#0f4c81]"
                 >
                   <Globe size={14} className="text-[#c5973e]" /> Website

@@ -24,7 +24,7 @@ export default function CarePathways() {
       title: "Joint & spine Rehab",
       icon: <Bone className="w-6 h-6" />,
       desc: "Programmes for knee, shoulder, hip and other joint problems, sports injuries and recovery after orthopaedic surgery.",
-      image: "sp.png"
+      image: "/sp.png"
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ export default function CarePathways() {
       icon: <HeartPulse className="w-6 h-6" />,
       desc: "Physiotherapy, manual therapy, chiropractic, osteopathy and supportive naturopathy approaches used responsibly within an individualized plan.",
       // Image of calm/nature/hands
-      image: "cer.png"
+      image: "/cer.png"
     }
   ];
 
@@ -67,45 +67,44 @@ export default function CarePathways() {
         </div>
 
         {/* 4 Main Care Pathways Grid - WITH IMAGES */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {pathways.map((item) => (
             <div 
               key={item.id} 
-              className="group relative h-[420px] rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-slate-100"
+              className="group relative min-h-[380px] sm:h-[440px] rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-slate-100 flex flex-col justify-end"
             >
               
-              {/* 1. Background Image */}
+              {/* 1. Background Image with Mobile-Friendly Alignment */}
               <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 bg-cover bg-[center_top] sm:bg-center transition-transform duration-700 group-hover:scale-105"
                 style={{ backgroundImage: `url(${item.image})` }}
               ></div>
 
-              {/* 2. Dark Overlay (Gradient) - Makes text readable */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#0a1e3f]/10 via-[#0a1e3f]/40 to-[#0a1e3f]/90 group-hover:to-[#0a1e3f]/95 transition-colors duration-300"></div>
+              {/* 2. Dark Overlay (Gradient) - Clear top visual, readable bottom text */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-[#0a1e3f]/50 to-[#0a1e3f]/95 sm:from-[#0a1e3f]/10 sm:via-[#0a1e3f]/40 sm:to-[#0a1e3f]/90 group-hover:to-[#0a1e3f]/95 transition-colors duration-300"></div>
 
               {/* 3. Content Container (Glass Effect) */}
-              <div className="absolute inset-0 p-8 flex flex-col justify-end z-10">
+              <div className="relative p-5 sm:p-7 flex flex-col justify-end z-10 h-full">
                 
-                {/* Icon Box - Floating at top or middle? Let's put it near top for style, or keep standard layout */}
-                {/* Based on Image 1, icon is at top. Let's position it absolute top or just flex start */}
-                <div className="absolute top-6 left-6">
-                   <div className="w-12 h-12 rounded-xl bg-white/90 backdrop-blur-sm shadow-lg flex items-center justify-center text-[#0071bd]">
+                {/* Icon Box */}
+                <div className="absolute top-4 left-4 sm:top-6 sm:left-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/95 backdrop-blur-sm shadow-lg flex items-center justify-center text-[#0071bd]">
                     {item.icon}
                   </div>
                 </div>
 
                 {/* Text Content - Bottom Aligned */}
-                <div className="mt-auto space-y-4">
-                  <h3 className="text-xl font-bold text-white leading-tight drop-shadow-md">
+                <div className="mt-auto space-y-2.5 sm:space-y-4 pt-16">
+                  <h3 className="text-lg sm:text-xl font-bold text-white leading-tight drop-shadow-md">
                     {item.title}
                   </h3>
                   
-                  <p className="text-gray-200 text-sm leading-relaxed line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
+                  <p className="text-gray-200 text-xs sm:text-sm leading-relaxed line-clamp-3 sm:line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
                     {item.desc}
                   </p>
 
                   {/* Learn More Link */}
-                  <div className="pt-2 flex items-center gap-2 text-[#c5973e] font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                  <div className="pt-1 sm:pt-2 flex items-center gap-2 text-[#c5973e] font-bold text-xs sm:text-sm opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 transform sm:translate-y-4 sm:group-hover:translate-y-0">
                     Learn More <ArrowRight size={16} />
                   </div>
                 </div>

@@ -2,9 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 
-// Detailed Categories based on your input
 const conditionCategories = [
   {
     title: "Spine & Nerve",
@@ -12,21 +11,22 @@ const conditionCategories = [
       { name: "Lower Back Pain", slug: "lower-back-pain" },
       { name: "Neck Pain", slug: "neck-pain" },
       { name: "Sciatica", slug: "sciatica" },
-      { name: "Slipped Disc / Disc Bulge", slug: "slipped-disc" },
-      { name: "Spondylosis (Lumbar/Cervical)", slug: "spondylosis" },
+      { name: "Slipped Disc / Bulge", slug: "slipped-disc" },
+      { name: "Spondylosis", slug: "spondylosis" },
       { name: "Spinal Stenosis", slug: "spinal-stenosis" },
-      { name: "Posture-Related Pain", slug: "posture-pain" },
+      { name: "Posture Pain", slug: "posture-pain" }
     ],
   },
   {
     title: "Knee & Lower Limb",
     items: [
       { name: "Knee Osteoarthritis", slug: "knee-osteoarthritis" },
+      { name: "Knee Pain", slug: "knee-pain" },
+      { name: "Post-Replacement Rehab", slug: "joint-replacement-rehab" },
       { name: "Hip Pain", slug: "hip-pain" },
       { name: "Ankle Pain", slug: "ankle-pain" },
       { name: "Plantar Fasciitis", slug: "plantar-fasciitis" },
-      { name: "Balance Problems", slug: "balance-problems" },
-      { name: "Post-Replacement Rehab", slug: "joint-replacement-rehab" },
+      { name: "Balance & Gait", slug: "balance-problems" }
     ],
   },
   {
@@ -34,35 +34,53 @@ const conditionCategories = [
     items: [
       { name: "Frozen Shoulder", slug: "frozen-shoulder" },
       { name: "Rotator Cuff Pain", slug: "rotator-cuff-pain" },
+      { name: "Shoulder Stiffness", slug: "shoulder-stiffness" },
       { name: "Tennis Elbow", slug: "tennis-elbow" },
       { name: "Wrist/Hand Weakness", slug: "wrist-hand-weakness" },
-      { name: "Post-Fracture Rehab", slug: "post-fracture-rehab" },
+      { name: "Post-Fracture Rehab", slug: "post-fracture-rehab" }
     ],
   },
   {
-    title: "Sports & Neuro",
+    title: "Sports & Activity",
     items: [
-      { name: "Sports Sprains & Strains", slug: "sports-injury" },
-      { name: "Return-to-Sport Conditioning", slug: "return-to-sport" },
-      { name: "Stroke Rehabilitation", slug: "stroke-rehab" },
-      { name: "Paralysis Rehab", slug: "paralysis-rehab" },
-      { name: "Neuropathy", slug: "neuropathy" },
-      { name: "Post-Operative Care", slug: "post-operative-care" },
+      { name: "Sprains & Strains", slug: "sprains-strains" },
+      { name: "Tendon Overload", slug: "tendon-overload" },
+      { name: "Return-to-Sport", slug: "return-to-sport" },
+      { name: "Reduced Flexibility", slug: "reduced-flexibility" },
+      { name: "Injury Risk Assessment", slug: "recurrent-injury-risk" }
     ],
   },
+  {
+    title: "Neurological Rehab",
+    items: [
+      { name: "Stroke Rehabilitation", slug: "stroke-rehab" },
+      { name: "Paralysis Rehab", slug: "paralysis-rehab" },
+      { name: "Gait Training", slug: "gait-training" },
+      { name: "Balance & Coordination", slug: "coordination-deficits" },
+      { name: "Neuropathy Limitations", slug: "neuropathy-limitations" }
+    ],
+  },
+  {
+    title: "Post-Operative Care",
+    items: [
+      { name: "Spine Surgery Rehab", slug: "spine-surgery-rehab" },
+      { name: "Joint Replacement", slug: "joint-replacement-rehab" },
+      { name: "Arthroscopy Recovery", slug: "arthroscopy-recovery" },
+      { name: "Fracture Rehabilitation", slug: "post-fracture-rehab" }
+    ],
+  }
 ];
 
 export default function ConditionDropdown() {
   return (
-    /* Changed left-2 to left-1/2 -translate-x-1/2 and w-200 to w-[850px] max-w-[95vw] */
-    <div className="absolute top-full left-1/2 -translate-x-1/2 w-[850px] max-w-[95vw] mt-2 bg-white rounded-xl shadow-2xl border border-slate-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-      <div className="p-6 grid grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="absolute top-full left-1/2 -translate-x-1/2 w-[900px] max-w-[95vw] mt-2 bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+      <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6 max-h-[70vh] overflow-y-auto">
         {conditionCategories.map((category, idx) => (
-          <div key={idx} className="space-y-3">
-            <h3 className="text-[#0a1e3f] font-bold text-sm uppercase tracking-wider border-b-2 border-[#c5973e] inline-block pb-1">
+          <div key={idx} className="space-y-2">
+            <h3 className="text-[#0a1e3f] font-bold text-xs uppercase tracking-wider border-b-2 border-[#D4AF37] inline-block pb-1">
               {category.title}
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-1">
               {category.items.map((item) => (
                 <li key={item.slug}>
                   <Link 
@@ -70,7 +88,7 @@ export default function ConditionDropdown() {
                     className="group flex items-center justify-between text-slate-600 hover:text-[#0071bd] transition-all text-xs font-medium py-1"
                   >
                     <span className="group-hover:translate-x-1 transition-transform duration-300">{item.name}</span>
-                    <ChevronRight size={12} className="opacity-0 group-hover:opacity-100 text-[#c5973e] transition-opacity duration-300" />
+                    <ChevronRight size={12} className="opacity-0 group-hover:opacity-100 text-[#D4AF37] transition-opacity duration-300" />
                   </Link>
                 </li>
               ))}
@@ -80,13 +98,14 @@ export default function ConditionDropdown() {
       </div>
       
       {/* Footer of Dropdown */}
-      <div className="bg-slate-50 px-6 py-3 border-t border-slate-100 flex items-center justify-between">
-        <span className="text-xs text-slate-500 font-medium">Not sure about your diagnosis?</span>
+      <div className="bg-slate-50 px-6 py-3 border-t border-slate-100 flex items-center justify-between text-xs">
+        <span className="text-slate-500 font-medium">Looking for a specific condition?</span>
         <Link 
-          href="/contact"
-          className="text-xs font-bold text-[#0071bd] hover:text-[#0a1e3f] flex items-center gap-1 transition-colors"
+          href="/conditions"
+          className="font-bold text-[rgb(20,42,98)] hover:text-[#D4AF37] flex items-center gap-1.5 transition-colors"
         >
-          Book Free Assessment <ChevronRight size={12} />
+          <span>View Conditions Knowledge Hub</span>
+          <ArrowRight size={14} />
         </Link>
       </div>
     </div>

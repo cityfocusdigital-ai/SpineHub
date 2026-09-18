@@ -17,7 +17,13 @@ import {
   Award,
   Sparkles,
   ArrowUpRight,
-  CalendarCheck
+  CalendarCheck,
+  Compass,
+  Clock,
+  Building2,
+  Palette,
+  FileText,
+  PhoneCall
 } from 'lucide-react';
 
 export default function AboutPage() {
@@ -362,13 +368,186 @@ export default function AboutPage() {
               );
             })}
           </div>
+        </div>
+
+        {/* =========================================================================
+            6. EXECUTIVE DIRECTION & CLINICAL STANDARDS
+           ========================================================================= */}
+        <div className="relative pt-16 border-t border-slate-200/80 mt-16 space-y-16">
+          
+          {/* Executive Direction Main Banner */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-r from-[rgb(20,42,98)] via-[rgb(15,32,75)] to-[rgb(20,42,98)] text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden border border-[#D4AF37]/30"
+          >
+            <div className="absolute top-0 right-0 w-80 h-80 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
+            
+            <div className="relative z-10 max-w-4xl space-y-6">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#E5C158] text-xs font-bold uppercase tracking-widest">
+                <Compass size={14} className="text-[#E5C158]" />
+                <span>1. Executive Direction</span>
+              </div>
+
+              <h3 className="text-3xl sm:text-4xl font-serif text-white leading-tight">
+                Specialist Rehabilitation Centre — Not Just a Collection of Machines
+              </h3>
+
+              <p className="text-slate-200 text-base sm:text-lg leading-relaxed">
+                Aditya Spine & Joint Rehab LLP is presented as a specialist rehabilitation centre—not as a collection of machines or one-off physiotherapy sessions. Our central promise is a careful clinical assessment, a personalized programme, and progress that is rigorously tracked through pain relief, mobility, strength, and day-to-day function.
+              </p>
+
+              {/* Core Line Highlight Box */}
+              <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-md border-l-4 border-[#D4AF37] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <span className="text-xs font-bold text-[#E5C158] uppercase tracking-wider block mb-1">Recommended Core Line</span>
+                  <p className="text-xl sm:text-2xl font-serif text-white font-semibold italic">
+                    "Advanced Care. Personalized Treatment. Lasting Results."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* 10-Second Communication Priorities */}
+          <div className="space-y-8">
+            <div className="text-center max-w-3xl mx-auto space-y-3">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#D4AF37]/10 text-[#B8860B] text-xs font-bold uppercase tracking-widest border border-[#D4AF37]/30">
+                <Clock size={14} className="text-[#D4AF37]" />
+                <span>Instant Patient Clarity</span>
+              </div>
+              <h3 className="text-3xl sm:text-4xl font-serif tracking-tight" style={{ color: 'rgb(20, 42, 98)' }}>
+                What We Communicate Within 10 Seconds
+              </h3>
+              <p className="text-slate-500 text-sm sm:text-base">
+                Key principles every patient discovers immediately upon visiting our clinic platform.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Specialized Care",
+                  desc: "Focused care for spine, joint, neurological, and movement-related conditions.",
+                  icon: ShieldCheck
+                },
+                {
+                  title: "Structured & Assessment-Led",
+                  desc: "Thorough physical assessment guiding a personalized, progressive treatment plan.",
+                  icon: Target
+                },
+                {
+                  title: "Clinical Leadership",
+                  desc: "Experienced clinical leadership supported by a trained rehabilitation team.",
+                  icon: Users
+                },
+                {
+                  title: "Advanced Tech + Hands-On",
+                  desc: "Modern rehabilitation technology combined with manual therapy and exercise.",
+                  icon: Sparkles
+                },
+                {
+                  title: "Spacious 2,500 Sq. Ft. Facility",
+                  desc: "Expansive centre near Borivali Station designed specifically for guided recovery.",
+                  icon: Building2
+                },
+                {
+                  title: "Easy Appointment Booking",
+                  desc: "Instant booking and consultation via Phone and WhatsApp (+91 74477 55533).",
+                  icon: PhoneCall
+                }
+              ].map((item, idx) => {
+                const IconComp = item.icon;
+                return (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: idx * 0.08 }}
+                    className="p-6 bg-slate-50 rounded-2xl border border-slate-200/80 hover:border-[#D4AF37] hover:bg-white hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                  >
+                    <div className="space-y-3">
+                      <div className="w-10 h-10 rounded-xl bg-[rgb(20,42,98)] text-white flex items-center justify-center shadow-md">
+                        <IconComp size={20} />
+                      </div>
+                      <h4 className="font-bold text-slate-900 text-lg">{item.title}</h4>
+                      <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Tone & Visual Personality Grid */}
+          <div className="space-y-8">
+            <div className="text-center max-w-3xl mx-auto space-y-3">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 text-slate-700 text-xs font-bold uppercase tracking-widest border border-slate-200">
+                <Palette size={14} className="text-[#D4AF37]" />
+                <span>Brand Identity</span>
+              </div>
+              <h3 className="text-3xl sm:text-4xl font-serif tracking-tight" style={{ color: 'rgb(20, 42, 98)' }}>
+                Tone & Visual Personality
+              </h3>
+            </div>
+
+            <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+                
+                {/* Left Column */}
+                <div className="p-6 sm:p-8 space-y-6">
+                  <div className="space-y-2">
+                    <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">Tone</span>
+                    <p className="text-slate-800 text-sm sm:text-base font-medium">
+                      Warm, reassuring, confident, ethical and easy for patients to understand.
+                    </p>
+                  </div>
+
+                  <div className="space-y-2 border-t border-slate-100 pt-6">
+                    <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">Brand Colours</span>
+                    <p className="text-slate-800 text-sm sm:text-base font-medium">
+                      Deep royal blue (<span className="text-[rgb(20,42,98)] font-bold">#142A62</span>), clean medical blue, crisp white, and restrained gold accents (<span className="text-[#D4AF37] font-bold">#D4AF37</span>).
+                    </p>
+                  </div>
+
+                  <div className="space-y-2 border-t border-slate-100 pt-6">
+                    <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">Imagery Standard</span>
+                    <p className="text-slate-800 text-sm sm:text-base font-medium">
+                      Real clinic, real team, supervised treatment, movement and genuine patient interaction. We avoid generic hospital stock images.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Right Column */}
+                <div className="p-6 sm:p-8 space-y-6 bg-slate-50/50">
+                  <div className="space-y-2">
+                    <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">Writing Language</span>
+                    <p className="text-slate-800 text-sm sm:text-base font-medium">
+                      Simple, accessible English first. Hindi and Marathi versions follow after final approval.
+                    </p>
+                  </div>
+
+                  <div className="space-y-2 border-t border-slate-200 pt-6">
+                    <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">Ethical Claims Standard</span>
+                    <p className="text-slate-800 text-sm sm:text-base font-medium leading-relaxed">
+                      We strictly avoid promising a "cure", guaranteed recovery, or "100% results". Responsible clinical language used: <em className="text-[rgb(20,42,98)] font-semibold font-serif">"may help"</em>, <em className="text-[rgb(20,42,98)] font-semibold font-serif">"designed to"</em>, <em className="text-[rgb(20,42,98)] font-semibold font-serif">"supports"</em>, and <em className="text-[rgb(20,42,98)] font-semibold font-serif">"subject to clinical assessment"</em>.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
 
         </div>
 
       </motion.div>
 
       {/* =========================================================================
-          6. CALL TO ACTION STRIP
+          7. CALL TO ACTION STRIP
          ========================================================================= */}
       <section className="relative z-10 bg-[#f8fafc] py-16 px-4 border-t border-slate-200/60">
         <motion.div 
