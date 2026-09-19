@@ -111,22 +111,58 @@ const conditionData = {
     goals: "Decrease daily knee pain, climb stairs comfortably, increase walking distance, and delay or avoid surgery."
   },
   "joint-replacement-rehab": {
-    title: "Joint Replacement Rehabilitation",
-    subtitle: "Structured Recovery for Total Knee & Hip Implants",
+    title: "Post-Replacement Rehabilitation",
+    subtitle: "Structured Post-Operative Recovery for Total Knee & Hip Implants",
     category: "Post-Operative Care",
-    heroImage: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1920&q=80",
-    description: "Following total knee or total hip arthroplasty, progressive rehabilitation is crucial to achieve surgeon-specified range of motion, reduce swelling, and regain normal walking pattern.",
-    symptoms: ["Post-surgical joint stiffness", "Surrounding muscle weakness", "Swelling around incision site", "Altered walking pattern or limp"],
-    causes: ["Recent total knee replacement (TKR)", "Total hip replacement (THR)", "Orthopaedic surgical intervention"],
-    redFlags: ["Signs of infection (pus, warmth, redness)", "Sudden calf swelling and severe pain (DVT risk)", "Surgical wound opening"],
+    heroImage: "/4.jpeg",
+    description: "Following total knee (TKR) or total hip (THR) replacement, progressive rehabilitation is crucial to achieve surgeon-specified range of motion, control post-operative swelling, rebuild quadriceps and glute strength, and eliminate gait limping.",
+    symptoms: ["Post-surgical joint stiffness and swelling", "Quadriceps and gluteal muscular weakness", "Swelling and tightness around incision site", "Difficulty climbing stairs or standing from chair", "Altered walking pattern or reliance on walking aid"],
+    causes: ["Total Knee Replacement (TKR)", "Total Hip Replacement (THR)", "Joint Arthroplasty intervention", "Post-operative muscular inhibition"],
+    redFlags: ["Sudden calf swelling, warmth, or severe pain (DVT warning)", "Surgical wound redness, pus, or persistent fever", "Sudden inability to bear weight or joint instability"],
     approach: "Strict adherence to surgeon protocols, early range-of-motion work, lymphatic massage, and progressive weight-bearing balance.",
     treatments: [
-      { name: "Flexion & Extension Restoration", desc: "Passive and active exercises to achieve full range." },
-      { name: "Body-Weight Supported Gait", desc: "Transitioning smoothly from walker/crutches to independent walking." },
-      { name: "Scar & Swelling Management", desc: "Targeted gentle release and edema reduction." },
-      { name: "Functional Retraining", desc: "Practicing safe chair transfer, stairs, and walking." }
+      { name: "Flexion & Extension Restoration", desc: "Targeted active and passive exercises to achieve full range of motion." },
+      { name: "Body-Weight Supported Gait Retraining", desc: "Transitioning smoothly from walker/crutches to independent walking without a limp." },
+      { name: "Scar & Swelling Management", desc: "Targeted gentle manual release and edema reduction protocols." },
+      { name: "Functional Retraining", desc: "Practicing safe chair transfers, stair climbing, and daily activity movement." }
     ],
-    goals: "Achieve optimal implant movement range, walk independently without limp, and return to daily living safely."
+    goals: "Achieve optimal implant movement range, walk independently without limp, and return to active daily living safely."
+  },
+  "post-replacement-rehab": {
+    title: "Post-Replacement Rehabilitation",
+    subtitle: "Structured Post-Operative Recovery for Total Knee & Hip Implants",
+    category: "Post-Operative Care",
+    heroImage: "/4.jpeg",
+    description: "Following total knee (TKR) or total hip (THR) replacement, progressive rehabilitation is crucial to achieve surgeon-specified range of motion, control post-operative swelling, rebuild quadriceps and glute strength, and eliminate gait limping.",
+    symptoms: ["Post-surgical joint stiffness and swelling", "Quadriceps and gluteal muscular weakness", "Swelling and tightness around incision site", "Difficulty climbing stairs or standing from chair", "Altered walking pattern or reliance on walking aid"],
+    causes: ["Total Knee Replacement (TKR)", "Total Hip Replacement (THR)", "Joint Arthroplasty intervention", "Post-operative muscular inhibition"],
+    redFlags: ["Sudden calf swelling, warmth, or severe pain (DVT warning)", "Surgical wound redness, pus, or persistent fever", "Sudden inability to bear weight or joint instability"],
+    approach: "Strict adherence to surgeon protocols, early range-of-motion work, lymphatic massage, and progressive weight-bearing balance.",
+    treatments: [
+      { name: "Flexion & Extension Restoration", desc: "Targeted active and passive exercises to achieve full range of motion." },
+      { name: "Body-Weight Supported Gait Retraining", desc: "Transitioning smoothly from walker/crutches to independent walking without a limp." },
+      { name: "Scar & Swelling Management", desc: "Targeted gentle manual release and edema reduction protocols." },
+      { name: "Functional Retraining", desc: "Practicing safe chair transfers, stair climbing, and daily activity movement." }
+    ],
+    goals: "Achieve optimal implant movement range, walk independently without limp, and return to active daily living safely."
+  },
+  "posh-replacement-rehab": {
+    title: "Post-Replacement Rehabilitation",
+    subtitle: "Structured Post-Operative Recovery for Total Knee & Hip Implants",
+    category: "Post-Operative Care",
+    heroImage: "/4.jpeg",
+    description: "Following total knee (TKR) or total hip (THR) replacement, progressive rehabilitation is crucial to achieve surgeon-specified range of motion, control post-operative swelling, rebuild quadriceps and glute strength, and eliminate gait limping.",
+    symptoms: ["Post-surgical joint stiffness and swelling", "Quadriceps and gluteal muscular weakness", "Swelling and tightness around incision site", "Difficulty climbing stairs or standing from chair", "Altered walking pattern or reliance on walking aid"],
+    causes: ["Total Knee Replacement (TKR)", "Total Hip Replacement (THR)", "Joint Arthroplasty intervention", "Post-operative muscular inhibition"],
+    redFlags: ["Sudden calf swelling, warmth, or severe pain (DVT warning)", "Surgical wound redness, pus, or persistent fever", "Sudden inability to bear weight or joint instability"],
+    approach: "Strict adherence to surgeon protocols, early range-of-motion work, lymphatic massage, and progressive weight-bearing balance.",
+    treatments: [
+      { name: "Flexion & Extension Restoration", desc: "Targeted active and passive exercises to achieve full range of motion." },
+      { name: "Body-Weight Supported Gait Retraining", desc: "Transitioning smoothly from walker/crutches to independent walking without a limp." },
+      { name: "Scar & Swelling Management", desc: "Targeted gentle manual release and edema reduction protocols." },
+      { name: "Functional Retraining", desc: "Practicing safe chair transfers, stair climbing, and daily activity movement." }
+    ],
+    goals: "Achieve optimal implant movement range, walk independently without limp, and return to active daily living safely."
   },
 
   // === 3. SHOULDER & UPPER LIMB ===

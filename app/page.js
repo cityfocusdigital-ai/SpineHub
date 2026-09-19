@@ -195,14 +195,14 @@ export default function HomePage() {
               <motion.div
                 animate={{ rotateX: tilt.x, rotateY: tilt.y }}
                 transition={{ type: "spring", stiffness: 150, damping: 15 }}
-                className="relative aspect-[15/19] rounded-2xl overflow-hidden border-2 border-[#D6C299]/40 shadow-2xl shadow-black/30"
+                className="relative aspect-[15/19] rounded-2xl overflow-hidden border-2 border-[#D6C299]/40 shadow-2xl shadow-black/30 bg-[#142A62]"
               >
                 <img
                   src="/office.jpeg"
                   alt="Clinic Interior"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-contain p-1"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#004899]/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#004899]/40 via-transparent to-transparent pointer-events-none" />
                 
                 {/* Gold accent corners */}
                 <div className="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-[#D6C299]/60 rounded-tr-xl" />

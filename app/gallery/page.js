@@ -149,32 +149,18 @@ export default function GalleryPage() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05, duration: 0.4 }}
-                whileHover={{ y: -8 }}
+                whileHover={{ y: -6 }}
                 onClick={() => setSelectedImage(image)}
-                className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl hover:shadow-blue-900/10 cursor-pointer bg-white border border-slate-100"
+                className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl cursor-pointer bg-white border border-slate-100"
               >
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <Image
                     src={image.src}
                     alt={image.alt}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
-                  
-                  {/* Elegant Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-950/90 via-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  {/* Content Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    <h3 className="text-white font-semibold text-lg mb-1 leading-tight">{image.alt}</h3>
-                    <p className="text-blue-200 text-sm capitalize">{image.category}</p>
-                  </div>
-
-                  {/* Subtle Zoom Indicator */}
-                  <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-md p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 scale-75 group-hover:scale-100">
-                    <ZoomIn className="text-white" size={20} strokeWidth={2.5} />
-                  </div>
                 </div>
               </motion.div>
             ))}

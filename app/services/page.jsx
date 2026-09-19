@@ -7,37 +7,37 @@ const services = [
   {
     title: "Spine Rehabilitation",
     description: "For people experiencing back pain, neck pain, sciatica, stiffness, disc-related symptoms, postural strain or reduced spinal movement. Care begins with assessment and may include education, mobility work, graded strengthening, neural mobility, hands-on therapy and suitable technology.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800" // Spine Care
+    image: "/Service-images/spine rehab.png"
   },
   {
     title: "Joint & Sports Rehabilitation",
     description: "Personalized rehabilitation for knee, shoulder, hip, ankle, elbow and other musculoskeletal problems. Programmes may support osteoarthritis management, sports injury recovery, muscle and tendon rehabilitation, joint mobility, strength, balance and safe return to activity.",
-    image: "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=800" // Sports/Joints
+    image: "/Service-images/joints.png"
   },
   {
     title: "Neuro Rehabilitation",
     description: "Structured, task-oriented rehabilitation for people affected by stroke, paralysis, weakness, walking difficulty, reduced coordination or balance limitations. Goals may include safer transfers, standing, walking, upper-limb use, endurance and independence.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800" // Neuro/Medical
+    image: "/Service-images/neuro.png"
   },
   {
     title: "Post-operative Rehabilitation",
     description: "Progressive rehabilitation after spine or joint surgery, fracture fixation, joint replacement or other orthopaedic procedures, subject to the surgeon’s precautions. Treatment focuses on pain and swelling management, mobility, muscle activation, strength, balance and return to daily activities.",
-    image: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&q=80&w=800" // Post-op/Recovery
+    image: "/Service-images/post operative rehab.png"
   },
   {
     title: "Chiropractic & Manual Therapy",
     description: "Hands-on techniques may be used to improve joint mobility, reduce stiffness and support movement when clinically appropriate. Every patient must be screened before manipulation or mobilization to ensure safety and effectiveness.",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=800" // Manual Therapy
+    image: "/Service-images/manual therapy.png"
   },
   {
     title: "Advanced Physiotherapy & Pain",
     description: "The centre uses modern rehabilitation technologies alongside exercise and hands-on care. Modalities are selected after screening and are not automatically suitable for every patient. The plan may include decompression, electrotherapy, high-intensity laser, shockwave, TECAR.",
-    image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80&w=800" // Tech/Laser
+    image: "/Service-images/pain.png"
   },
   {
     title: "Naturopathy & Integrative Care",
     description: "Supportive naturopathy approaches may be included for relaxation, lifestyle improvement and general well-being. These services should complement—not replace—appropriate medical diagnosis, prescribed medication or urgent medical care.",
-    image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=800" // Nature/Calm
+    image: "/Service-images/neuropathy.png"
   }
 ];
 
@@ -50,7 +50,7 @@ export default function ServicesPage() {
         {/* Background Image with Dark Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1920"
+            src="/spine-banner.avif"
             alt="Clinic Background"
             className="w-full h-full object-cover"
           />
