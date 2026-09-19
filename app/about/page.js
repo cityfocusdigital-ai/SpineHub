@@ -85,7 +85,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="bg-[#fcfdfd] min-h-screen text-slate-800 font-sans selection:bg-[#D4AF37]/30 selection:text-[rgb(20,42,98)]">
+    <div className="bg-[#fcfdfd] min-h-screen text-slate-800 font-sans selection:bg-[#C69A3C]/30 selection:text-[rgb(20,42,98)]">
       
       {/* =========================================================================
           1. HERO BANNER WITH MOTION REVEAL
@@ -111,7 +111,7 @@ export default function AboutPage() {
               initial={{ pathLength: 0 }}
               animate={{ pathLength: 1 }}
               transition={{ duration: 2, ease: "easeInOut" }}
-              d="M 50 250 C 200 50, 350 350, 480 120" stroke="#D4AF37" strokeWidth="2.5" fill="none" 
+              d="M 50 250 C 200 50, 350 350, 480 120" stroke="#C69A3C" strokeWidth="2.5" fill="none" 
             />
           </svg>
         </div>
@@ -166,7 +166,7 @@ export default function AboutPage() {
             We Care for Every Move You Make.
           </h2>
           
-          <p className="text-slate-500 italic text-sm sm:text-base pt-2 border-l-2 border-[#D4AF37] pl-4">
+          <p className="text-slate-500 italic text-sm sm:text-base pt-2 border-l-2 border-[#C69A3C] pl-4">
             "To find health should be the object of the doctor. Understand the patient before selecting the treatment."
           </p>
         </div>
@@ -234,7 +234,7 @@ export default function AboutPage() {
           <motion.div 
             whileHover={{ y: -5 }}
             transition={{ duration: 0.3 }}
-            className="bg-gradient-to-b from-[#f8fafc] to-white p-8 rounded-3xl border border-slate-200/80 hover:border-[#D4AF37] shadow-sm hover:shadow-xl transition-all"
+            className="bg-gradient-to-b from-[#f8fafc] to-white p-8 rounded-3xl border border-slate-200/80 hover:border-[#C69A3C] shadow-sm hover:shadow-xl transition-all"
           >
             <div className="p-3 text-white rounded-2xl w-fit mb-4 shadow-md" style={{ backgroundColor: 'rgb(20, 42, 98)' }}>
               <Target size={26} />
@@ -248,9 +248,9 @@ export default function AboutPage() {
           <motion.div 
             whileHover={{ y: -5 }}
             transition={{ duration: 0.3 }}
-            className="bg-gradient-to-b from-[#f8fafc] to-white p-8 rounded-3xl border border-slate-200/80 hover:border-[#D4AF37] shadow-sm hover:shadow-xl transition-all"
+            className="bg-gradient-to-b from-[#f8fafc] to-white p-8 rounded-3xl border border-slate-200/80 hover:border-[#C69A3C] shadow-sm hover:shadow-xl transition-all"
           >
-            <div className="p-3 bg-[#D4AF37] text-[rgb(20,42,98)] rounded-2xl w-fit mb-4 font-bold shadow-md">
+            <div className="p-3 bg-[#C69A3C] text-[rgb(20,42,98)] rounded-2xl w-fit mb-4 font-bold shadow-md">
               <Eye size={26} />
             </div>
             <h3 className="text-2xl font-serif text-slate-900 mb-3">Our Vision</h3>
@@ -274,8 +274,8 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-2xl mx-auto mb-14 space-y-3"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#D4AF37]/10 text-[#B8860B] text-xs font-bold uppercase tracking-widest border border-[#D4AF37]/30 shadow-sm">
-              <Sparkles size={13} className="text-[#D4AF37]" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C69A3C]/10 text-[#8c6a20] text-xs font-bold uppercase tracking-widest border border-[#C69A3C]/30 shadow-sm">
+              <Sparkles size={13} className="text-[#C69A3C]" />
               <span>Guiding Principles</span>
             </div>
             
@@ -304,7 +304,7 @@ export default function AboutPage() {
                   onMouseEnter={() => setActiveValue(index)}
                   onMouseLeave={() => setActiveValue(null)}
                   whileHover={{ y: -6, transition: { duration: 0.3 } }}
-                  className="relative rounded-2xl sm:rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 overflow-hidden group flex flex-col justify-between"
+                  className="relative rounded-2xl sm:rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#C69A3C] transition-all duration-500 overflow-hidden group flex flex-col justify-between"
                 >
                   
                   {/* Hover Image Reveal */}
@@ -321,7 +321,7 @@ export default function AboutPage() {
                     <motion.div 
                       whileHover={{ scale: 1.12, rotate: 5 }}
                       transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                      className="p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-slate-50 text-[rgb(20,42,98)] group-hover:bg-[#D4AF37] group-hover:text-[rgb(20,42,98)] transition-colors duration-500 shadow-sm"
+                      className="p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-slate-50 text-[rgb(20,42,98)] group-hover:bg-[#C69A3C] group-hover:text-[rgb(20,42,98)] transition-colors duration-500 shadow-sm"
                     >
                       <IconComp size={20} className="sm:w-[22px] sm:h-[22px]" />
                     </motion.div>
@@ -330,7 +330,7 @@ export default function AboutPage() {
                       <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 text-slate-500 group-hover:bg-white/10 group-hover:text-white/90 transition-colors">
                         {value.tag}
                       </span>
-                      <span className="font-serif text-xl sm:text-2xl font-bold text-slate-300 group-hover:text-[#D4AF37]/60 transition-colors">
+                      <span className="font-serif text-xl sm:text-2xl font-bold text-slate-300 group-hover:text-[#C69A3C]/60 transition-colors">
                         {value.id}
                       </span>
                     </div>
@@ -348,7 +348,7 @@ export default function AboutPage() {
                   </div>
 
                   {/* Bottom Beam Glow (Gold) */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#D4AF37] to-[rgb(20,42,98)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#C69A3C] to-[rgb(20,42,98)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 </motion.div>
               );
@@ -367,9 +367,9 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-[rgb(20,42,98)] via-[rgb(15,32,75)] to-[rgb(20,42,98)] text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden border border-[#D4AF37]/30"
+            className="bg-gradient-to-r from-[rgb(20,42,98)] via-[rgb(15,32,75)] to-[rgb(20,42,98)] text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden border border-[#C69A3C]/30"
           >
-            <div className="absolute top-0 right-0 w-80 h-80 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-80 h-80 bg-[#C69A3C]/10 rounded-full blur-3xl pointer-events-none" />
             
             <div className="relative z-10 max-w-4xl space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#E5C158] text-xs font-bold uppercase tracking-widest">
@@ -386,7 +386,7 @@ export default function AboutPage() {
               </p>
 
               {/* Core Line Highlight Box */}
-              <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-md border-l-4 border-[#D4AF37] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-md border-l-4 border-[#C69A3C] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
                   <span className="text-xs font-bold text-[#E5C158] uppercase tracking-wider block mb-1">Our Guiding Motto</span>
                   <p className="text-xl sm:text-2xl font-serif text-white font-semibold italic">
@@ -400,8 +400,8 @@ export default function AboutPage() {
           {/* Clinical Commitments */}
           <div className="space-y-8">
             <div className="text-center max-w-3xl mx-auto space-y-3">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#D4AF37]/10 text-[#B8860B] text-xs font-bold uppercase tracking-widest border border-[#D4AF37]/30">
-                <ShieldCheck size={14} className="text-[#D4AF37]" />
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C69A3C]/10 text-[#8c6a20] text-xs font-bold uppercase tracking-widest border border-[#C69A3C]/30">
+                <ShieldCheck size={14} className="text-[#C69A3C]" />
                 <span>Our Core Clinical Standards</span>
               </div>
               <h3 className="text-3xl sm:text-4xl font-serif tracking-tight" style={{ color: 'rgb(20, 42, 98)' }}>
@@ -453,7 +453,7 @@ export default function AboutPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: idx * 0.08 }}
-                    className="p-6 bg-slate-50 rounded-2xl border border-slate-200/80 hover:border-[#D4AF37] hover:bg-white hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                    className="p-6 bg-slate-50 rounded-2xl border border-slate-200/80 hover:border-[#C69A3C] hover:bg-white hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
                   >
                     <div className="space-y-3">
                       <div className="w-10 h-10 rounded-xl bg-[rgb(20,42,98)] text-white flex items-center justify-center shadow-md">
@@ -481,11 +481,11 @@ export default function AboutPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-5xl mx-auto rounded-[2.5rem] p-8 sm:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 border border-[#D4AF37]/30 relative overflow-hidden" 
+          className="max-w-5xl mx-auto rounded-[2.5rem] p-8 sm:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 border border-[#C69A3C]/30 relative overflow-hidden" 
           style={{ backgroundColor: 'rgb(20, 42, 98)' }}
         >
           {/* Ambient Glow */}
-          <div className="absolute -top-12 -right-12 w-64 h-64 bg-[#D4AF37]/15 rounded-full blur-2xl pointer-events-none" />
+          <div className="absolute -top-12 -right-12 w-64 h-64 bg-[#C69A3C]/15 rounded-full blur-2xl pointer-events-none" />
 
           <div className="text-center md:text-left space-y-3 max-w-xl relative z-10">
             <h3 className="text-2xl sm:text-3xl font-serif text-white">
@@ -500,7 +500,7 @@ export default function AboutPage() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link 
                 href="/contact" 
-                className="inline-flex items-center gap-2 bg-[#D4AF37] text-[rgb(20,42,98)] font-bold px-8 py-4 rounded-full hover:bg-white hover:text-[rgb(20,42,98)] transition-colors shadow-lg"
+                className="inline-flex items-center gap-2 bg-[#C69A3C] text-[rgb(20,42,98)] font-bold px-8 py-4 rounded-full hover:bg-white hover:text-[rgb(20,42,98)] transition-colors shadow-lg"
               >
                 <CalendarCheck size={18} />
                 <span>Book Appointment</span>

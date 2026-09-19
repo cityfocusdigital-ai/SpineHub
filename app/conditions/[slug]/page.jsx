@@ -445,7 +445,7 @@ export default function ConditionPage() {
           <div className="lg:col-span-8 space-y-6">
             
             <div className="hero-text-elem inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md">
-              <span className="w-2 h-2 rounded-full bg-[#c5973e]"></span>
+              <span className="w-2 h-2 rounded-full bg-[#C69A3C]"></span>
               <span className="text-white text-xs font-bold tracking-widest uppercase">{data.category}</span>
             </div>
             
@@ -458,7 +458,7 @@ export default function ConditionPage() {
             </p>
 
             <div className="hero-text-elem flex flex-wrap gap-4 pt-4">
-              <Link href="/contact" className="px-8 py-4 bg-[#c5973e] hover:bg-[#b08535] text-white font-bold rounded-xl shadow-lg shadow-[#c5973e]/30 transition-all flex items-center gap-2 text-sm sm:text-base">
+              <Link href="/contact" className="px-8 py-4 bg-[#C69A3C] hover:bg-[#b08535] text-white font-bold rounded-xl shadow-lg shadow-[#C69A3C]/30 transition-all flex items-center gap-2 text-sm sm:text-base">
                 <span>Book Clinical Assessment</span>
                 <ArrowRight size={18} />
               </Link>
@@ -472,17 +472,17 @@ export default function ConditionPage() {
           <div className="lg:col-span-4 hidden lg:block">
             <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-3xl text-white space-y-4">
               <div className="flex items-center gap-3 border-b border-white/10 pb-4">
-                <ShieldCheck size={28} className="text-[#c5973e]" />
+                <ShieldCheck size={28} className="text-[#C69A3C]" />
                 <div>
                   <h3 className="font-bold text-sm">Assessment-Led Protocol</h3>
                   <p className="text-xs text-blue-200">Personalized Care Blueprint</p>
                 </div>
               </div>
               <ul className="space-y-2 text-xs text-blue-100">
-                <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-[#c5973e]" /> Physical examination &amp; movement screening</li>
-                <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-[#c5973e]" /> Red-flag safety screening</li>
-                <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-[#c5973e]" /> Active exercise + hands-on therapy</li>
-                <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-[#c5973e]" /> Tracked functional goals</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-[#C69A3C]" /> Physical examination &amp; movement screening</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-[#C69A3C]" /> Red-flag safety screening</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-[#C69A3C]" /> Active exercise + hands-on therapy</li>
+                <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-[#C69A3C]" /> Tracked functional goals</li>
               </ul>
             </div>
           </div>
@@ -492,7 +492,7 @@ export default function ConditionPage() {
       {/* --- RESPONSIBLE CLINICAL DISCLAIMER BANNER --- */}
       <div className="bg-blue-900 text-blue-100 py-3 px-6 text-xs text-center border-b border-blue-800 font-medium">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-2">
-          <Stethoscope size={16} className="text-[#c5973e] shrink-0" />
+          <Stethoscope size={16} className="text-[#C69A3C] shrink-0" />
           <span><strong>Notice:</strong> Information provided is for educational awareness. Treatment plans require in-person physical assessment and screening.</span>
         </div>
       </div>
@@ -519,7 +519,7 @@ export default function ConditionPage() {
               <div className="grid sm:grid-cols-2 gap-3">
                 {data.symptoms.map((sym, i) => (
                   <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
-                    <CheckCircle2 size={18} className="text-[#c5973e] mt-0.5 shrink-0" />
+                    <CheckCircle2 size={18} className="text-[#C69A3C] mt-0.5 shrink-0" />
                     <span className="text-slate-800 text-xs sm:text-sm font-medium">{sym}</span>
                   </div>
                 ))}
@@ -596,7 +596,7 @@ export default function ConditionPage() {
         </div>
 
         {/* GOALS SECTION */}
-        <div className="section-reveal bg-gradient-to-r from-[#c5973e] to-[#d4af37] rounded-3xl p-8 sm:p-12 text-[rgb(20,42,98)] shadow-lg flex flex-col sm:flex-row items-center gap-6">
+        <div className="section-reveal bg-gradient-to-r from-[#C69A3C] to-[#C69A3C] rounded-3xl p-8 sm:p-12 text-[rgb(20,42,98)] shadow-lg flex flex-col sm:flex-row items-center gap-6">
           <div className="w-16 h-16 bg-white/30 backdrop-blur-md rounded-2xl flex items-center justify-center shrink-0">
             <Target size={36} className="text-[rgb(20,42,98)]" />
           </div>

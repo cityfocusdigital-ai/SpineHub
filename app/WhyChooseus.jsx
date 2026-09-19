@@ -40,12 +40,12 @@ export default function WhyChooseUs() {
           
           {/* Left Content - Sticky on Desktop */}
           <div className="lg:sticky lg:top-32 space-y-6">
-            <span className="text-[#D4AF37] font-bold tracking-widest uppercase text-xs sm:text-sm block">
+            <span className="text-[#C69A3C] font-bold tracking-widest uppercase text-xs sm:text-sm block">
               Our Commitment
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[rgb(20,42,98)] leading-tight">
               Why Patients Trust <br />
-              <span className="text-[#D4AF37]">
+              <span className="text-[#C69A3C]">
                 Aditya Spine &amp; Joint
               </span>
             </h2>
@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
             
             {/* Decorative Element */}
             <div className="flex items-center gap-4 pt-2">
-              <div className="h-1 w-16 bg-[#D4AF37] rounded-full"></div>
+              <div className="h-1 w-16 bg-[#C69A3C] rounded-full"></div>
               <span className="text-[rgb(20,42,98)] font-bold italic text-sm">Excellence in Advanced Care</span>
             </div>
           </div>
@@ -65,10 +65,10 @@ export default function WhyChooseUs() {
             {reasons.map((item, index) => (
               <div 
                 key={index} 
-                className="group p-6 bg-slate-50/80 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md hover:bg-white hover:border-[#D4AF37]/50 transition-all duration-300 transform hover:-translate-y-1"
+                className="group p-6 bg-slate-50/80 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md hover:bg-white hover:border-[#C69A3C]/50 transition-all duration-300 transform hover:-translate-y-1"
               >
                 <div className="flex items-start gap-4">
-                  <div className="mt-0.5 shrink-0 w-8 h-8 rounded-full bg-blue-100/60 flex items-center justify-center text-[rgb(20,42,98)] group-hover:bg-[#D4AF37] group-hover:text-[rgb(20,42,98)] transition-colors duration-300">
+                  <div className="mt-0.5 shrink-0 w-8 h-8 rounded-full bg-blue-100/60 flex items-center justify-center text-[rgb(20,42,98)] group-hover:bg-[#C69A3C] group-hover:text-[rgb(20,42,98)] transition-colors duration-300">
                     <CheckCircle2 size={18} strokeWidth={2.5} />
                   </div>
                   <div>

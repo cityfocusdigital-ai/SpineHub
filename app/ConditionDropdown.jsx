@@ -77,7 +77,7 @@ export default function ConditionDropdown() {
       <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6 max-h-[70vh] overflow-y-auto">
         {conditionCategories.map((category, idx) => (
           <div key={idx} className="space-y-2">
-            <h3 className="text-[#0a1e3f] font-bold text-xs uppercase tracking-wider border-b-2 border-[#D4AF37] inline-block pb-1">
+            <h3 className="text-[#0a1e3f] font-bold text-xs uppercase tracking-wider border-b-2 border-[#C69A3C] inline-block pb-1">
               {category.title}
             </h3>
             <ul className="space-y-1">
@@ -88,7 +88,7 @@ export default function ConditionDropdown() {
                     className="group flex items-center justify-between text-slate-600 hover:text-[#0071bd] transition-all text-xs font-medium py-1"
                   >
                     <span className="group-hover:translate-x-1 transition-transform duration-300">{item.name}</span>
-                    <ChevronRight size={12} className="opacity-0 group-hover:opacity-100 text-[#D4AF37] transition-opacity duration-300" />
+                    <ChevronRight size={12} className="opacity-0 group-hover:opacity-100 text-[#C69A3C] transition-opacity duration-300" />
                   </Link>
                 </li>
               ))}
@@ -102,7 +102,7 @@ export default function ConditionDropdown() {
         <span className="text-slate-500 font-medium">Looking for a specific condition?</span>
         <Link 
           href="/conditions"
-          className="font-bold text-[rgb(20,42,98)] hover:text-[#D4AF37] flex items-center gap-1.5 transition-colors"
+          className="font-bold text-[rgb(20,42,98)] hover:text-[#C69A3C] flex items-center gap-1.5 transition-colors"
         >
           <span>View Conditions Knowledge Hub</span>
           <ArrowRight size={14} />

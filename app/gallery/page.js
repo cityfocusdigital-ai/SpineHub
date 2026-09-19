@@ -15,15 +15,12 @@ const galleryData = [
   { id: 6, src: '/6.jpeg', alt: 'Advanced Equipment', category: 'facility' },
   { id: 7, src: '/7.jpeg', alt: 'Mobility & Gait Training', category: 'exercise' },
   { id: 8, src: '/8.jpeg', alt: 'Neuromuscular Re-education', category: 'therapy' },
-  { id: 9, src: '/9.jpeg', alt: 'Postural Correction & Spine Care', category: 'treatment' },
-  { id: 10, src: '/10.jpeg', alt: 'Guided Strengthening Routine', category: 'exercise' },
-  { id: 11, src: '/11.jpeg', alt: 'Clinical Assessment & Consultation', category: 'treatment' },
-  { id: 12, src: '/12.jpeg', alt: 'Recovery Milestone Progress', category: 'therapy' },
-  { id: 13, src: '/13.jpeg', alt: 'Functional Movement Training', category: 'exercise' },
-  { id: 14, src: '/14.jpeg', alt: 'Dedicated Patient Care', category: 'treatment' },
-  { id: 15, src: '/15.jpeg', alt: 'Specialized Joint Mobilization', category: 'therapy' },
-  { id: 16, src: '/16.jpeg', alt: 'Active Rehabilitation Therapy', category: 'therapy' },
-  { id: 17, src: '/17.jpeg', alt: 'Patient Consultation & Wellness', category: 'treatment' },
+  { id: 9, src: '/10.jpeg', alt: 'Guided Strengthening Routine', category: 'exercise' },
+  { id: 11, src: '/12.jpeg', alt: 'Recovery Milestone Progress', category: 'therapy' },
+  { id: 13, src: '/14.jpeg', alt: 'Dedicated Patient Care', category: 'treatment' },
+  { id: 14, src: '/15.jpeg', alt: 'Specialized Joint Mobilization', category: 'therapy' },
+  { id: 15, src: '/16.jpeg', alt: 'Active Rehabilitation Therapy', category: 'therapy' },
+  { id: 16, src: '/17.jpeg', alt: 'Patient Consultation & Wellness', category: 'treatment' },
 ];
 
 const categories = [
@@ -44,8 +41,8 @@ export default function GalleryPage() {
   const yHero = useTransform(scrollY, [0, 500], [0, 150]);
   const opacityHero = useTransform(scrollY, [0, 300], [1, 0]);
 
-  const filteredImages = selectedCategory === 'all' 
-    ? galleryData 
+  const filteredImages = selectedCategory === 'all'
+    ? galleryData
     : galleryData.filter(img => img.category === selectedCategory);
 
   // 2. Keyboard Navigation (Escape key to close modal)
@@ -59,12 +56,12 @@ export default function GalleryPage() {
 
   return (
     <div ref={containerRef} className="min-h-screen bg-slate-50">
-      
+
       {/* Enhanced Parallax Background Section */}
       <section className="relative h-[50vh] min-h-[450px] overflow-hidden">
         <motion.div style={{ y: yHero, opacity: opacityHero }} className="absolute inset-0">
           <Image
-            src="/spine-banner.avif" 
+            src="/spine-banner.avif"
             alt="Gallery Hero"
             fill
             className="object-cover"
@@ -73,7 +70,7 @@ export default function GalleryPage() {
           {/* Navy Blue Gradient Overlay as per your preference */}
           <div className="absolute inset-0 bg-gradient-to-b from-blue-950/80 via-blue-900/60 to-slate-50" />
         </motion.div>
-        
+
         <div className="relative z-10 h-full flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -81,7 +78,7 @@ export default function GalleryPage() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-center px-4 max-w-4xl mx-auto"
           >
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
@@ -105,14 +102,13 @@ export default function GalleryPage() {
           <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide snap-x">
             {categories.map((category) => {
               const isActive = selectedCategory === category.id;
-              
+
               return (
                 <motion.button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`relative px-6 py-2.5 rounded-full font-medium whitespace-nowrap transition-colors duration-300 snap-start ${
-                    isActive ? 'text-white' : 'text-slate-600 hover:text-blue-900 hover:bg-blue-50'
-                  }`}
+                  className={`relative px-6 py-2.5 rounded-full font-medium whitespace-nowrap transition-colors duration-300 snap-start ${isActive ? 'text-white' : 'text-slate-600 hover:text-blue-900 hover:bg-blue-50'
+                    }`}
                 >
                   {/* Animated Sliding Background Pill */}
                   {isActive && (
@@ -135,7 +131,7 @@ export default function GalleryPage() {
       {/* Gallery Grid with Staggered Animation */}
       <main className="max-w-7xl mx-auto px-4 py-16">
         <AnimatePresence mode="wait">
-          <motion.div 
+          <motion.div
             key={selectedCategory}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -151,7 +147,7 @@ export default function GalleryPage() {
                 transition={{ delay: index * 0.05, duration: 0.4 }}
                 whileHover={{ y: -6 }}
                 onClick={() => setSelectedImage(image)}
-                className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl cursor-pointer bg-white border border-slate-100"
+                className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl cursor-pointer bg-white border border-slate-100 flex flex-col"
               >
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <Image
@@ -162,6 +158,16 @@ export default function GalleryPage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
+
+                {/* Card footer displaying name and category */}
+                <div className="p-4 bg-white flex flex-col justify-between flex-grow">
+                  <h3 className="font-semibold text-slate-800 text-sm md:text-base line-clamp-1 group-hover:text-blue-900 transition-colors">
+                    {image.alt}
+                  </h3>
+                  <span className="text-xs font-medium text-blue-600 capitalize mt-1">
+                    {image.category}
+                  </span>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -169,7 +175,7 @@ export default function GalleryPage() {
 
         {/* Empty State */}
         {filteredImages.length === 0 && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center py-24"
@@ -203,8 +209,8 @@ export default function GalleryPage() {
             >
               <X size={28} strokeWidth={2.5} />
             </motion.button>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ scale: 0.9, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -218,12 +224,12 @@ export default function GalleryPage() {
                   src={selectedImage.src}
                   alt={selectedImage.alt}
                   fill
-                  className="object-contain" 
+                  className="object-contain"
                   priority
                 />
               </div>
-              
-              <motion.div 
+
+              <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}

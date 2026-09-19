@@ -60,7 +60,7 @@ export default function Header() {
             <span className="text-base sm:text-lg font-bold tracking-tight text-[rgb(20,42,98)]">
               Aditya Spine &amp; Joint
             </span>
-            <span className="text-[10px] sm:text-[11px] font-semibold text-[#D4AF37] tracking-wide">
+            <span className="text-[10px] sm:text-[11px] font-semibold text-[#C69A3C] tracking-wide">
               Rehabilitation Clinic
             </span>
           </div>
@@ -76,7 +76,7 @@ export default function Header() {
             }`}
           >
             Home
-            {pathname === "/" && <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#D4AF37]" />}
+            {pathname === "/" && <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#C69A3C]" />}
           </Link>
 
           {/* About & Profile Dropdown */}
@@ -97,17 +97,17 @@ export default function Header() {
                 <Link
                   href="/about"
                   onClick={() => setAboutDropdownOpen(false)}
-                  className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-700 hover:bg-[#D4AF37]/10 hover:text-[rgb(20,42,98)] transition-colors"
+                  className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-700 hover:bg-[#C69A3C]/10 hover:text-[rgb(20,42,98)] transition-colors"
                 >
-                  <Info size={15} className="text-[#D4AF37]" />
+                  <Info size={15} className="text-[#C69A3C]" />
                   <span>About Us</span>
                 </Link>
                 <Link
                   href="/about/profile"
                   onClick={() => setAboutDropdownOpen(false)}
-                  className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-700 hover:bg-[#D4AF37]/10 hover:text-[rgb(20,42,98)] transition-colors"
+                  className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-700 hover:bg-[#C69A3C]/10 hover:text-[rgb(20,42,98)] transition-colors"
                 >
-                  <UserCheck size={15} className="text-[#D4AF37]" />
+                  <UserCheck size={15} className="text-[#C69A3C]" />
                   <span>Doctor Profile</span>
                 </Link>
               </div>
@@ -126,7 +126,7 @@ export default function Header() {
                 }`}
               >
                 {item.name}
-                {isActive && <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#D4AF37]" />}
+                {isActive && <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#C69A3C]" />}
               </Link>
             );
           })}
@@ -193,14 +193,14 @@ export default function Header() {
               className="font-medium text-base text-gray-800 pl-3 py-1 flex items-center gap-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <Info size={15} className="text-[#D4AF37]" /> About Us
+              <Info size={15} className="text-[#C69A3C]" /> About Us
             </Link>
             <Link
               href="/about/profile"
               className="font-medium text-base text-gray-800 pl-3 py-1 flex items-center gap-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <UserCheck size={15} className="text-[#D4AF37]" /> Doctor Profile
+              <UserCheck size={15} className="text-[#C69A3C]" /> Doctor Profile
             </Link>
           </div>
 

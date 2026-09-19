@@ -80,7 +80,7 @@ export default function FAQ() {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#142A62]/10 text-[#142A62] text-xs font-bold uppercase tracking-wider mb-4">
-            <HelpCircle size={14} className="text-[#D6C299]" />
+            <HelpCircle size={14} className="text-[#C69A3C]" />
             <span>Got Questions?</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#142A62] tracking-tight">
@@ -146,7 +146,7 @@ export default function FAQ() {
               href="https://wa.me/917447755533"
               target="_blank"
               rel="noreferrer"
-              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-[#D4AF37] hover:bg-[#c5973e] text-[rgb(20,42,98)] font-bold px-5 py-3 rounded-xl text-sm transition-colors shadow-sm"
+              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-[#C69A3C] hover:bg-[#b08535] text-[rgb(20,42,98)] font-bold px-5 py-3 rounded-xl text-sm transition-colors shadow-sm"
             >
               <MessageCircle size={16} />
               <span>WhatsApp</span>
@@ -158,3 +158,4 @@ export default function FAQ() {
     </section>
   );
 }
+

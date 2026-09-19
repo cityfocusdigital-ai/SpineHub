@@ -108,7 +108,7 @@ export default function TechnologyPage() {
       
       {/* --- HERO BANNER --- */}
       <section className="relative pt-32 pb-20 bg-[rgb(20,42,98)] text-white overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#C69A3C]/10 rounded-full blur-3xl pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-1.5 rounded-full text-xs font-bold text-[#E5C158] uppercase tracking-widest">
@@ -126,13 +126,13 @@ export default function TechnologyPage() {
 
           <div className="pt-4 flex flex-wrap justify-center gap-4 text-xs font-bold text-blue-200">
             <span className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-full border border-white/10">
-              <CheckCircle2 size={14} className="text-[#D4AF37]" /> Assessment-Led Selection
+              <CheckCircle2 size={14} className="text-[#C69A3C]" /> Assessment-Led Selection
             </span>
             <span className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-full border border-white/10">
-              <CheckCircle2 size={14} className="text-[#D4AF37]" /> Integrated with Active Exercise
+              <CheckCircle2 size={14} className="text-[#C69A3C]" /> Integrated with Active Exercise
             </span>
             <span className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-full border border-white/10">
-              <CheckCircle2 size={14} className="text-[#D4AF37]" /> Contraindication Screened
+              <CheckCircle2 size={14} className="text-[#C69A3C]" /> Contraindication Screened
             </span>
           </div>
         </div>
@@ -141,7 +141,7 @@ export default function TechnologyPage() {
       {/* --- RESPONSIBLE CLINICAL STATEMENT BANNER --- */}
       <div className="bg-slate-900 text-slate-200 py-3 px-6 text-xs text-center border-b border-slate-800">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-2">
-          <AlertCircle size={16} className="text-[#D4AF37] shrink-0" />
+          <AlertCircle size={16} className="text-[#C69A3C] shrink-0" />
           <span><strong>Clinical Standard:</strong> We do not operate a "machine catalogue". All equipment modalities are applied only after physical clinical examination and safety screening.</span>
         </div>
       </div>
@@ -150,7 +150,7 @@ export default function TechnologyPage() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-16 space-y-16">
         
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-[#D4AF37] font-bold uppercase tracking-wider text-xs">Guided Demonstration</span>
+          <span className="text-[#C69A3C] font-bold uppercase tracking-wider text-xs">Guided Demonstration</span>
           <h2 className="text-3xl sm:text-4xl font-serif text-[rgb(20,42,98)] font-bold">
             How Technology Fits Into Your Recovery
           </h2>
@@ -182,7 +182,7 @@ export default function TechnologyPage() {
                 {/* Demonstration Play Trigger Button */}
                 <button
                   onClick={() => setActiveVideo(item)}
-                  className="absolute inset-0 m-auto w-14 h-14 rounded-full bg-[#D4AF37] text-[rgb(20,42,98)] flex items-center justify-center shadow-2xl hover:scale-110 transition-transform group-hover:bg-white"
+                  className="absolute inset-0 m-auto w-14 h-14 rounded-full bg-[#C69A3C] text-[rgb(20,42,98)] flex items-center justify-center shadow-2xl hover:scale-110 transition-transform group-hover:bg-white"
                   aria-label={`View clinical explanation for ${item.name}`}
                 >
                   <Play size={24} className="fill-current ml-1" />
@@ -237,7 +237,7 @@ export default function TechnologyPage() {
               {/* Modal Header */}
               <div className="bg-[rgb(20,42,98)] text-white p-6 flex items-center justify-between">
                 <div>
-                  <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">{activeVideo.badge}</span>
+                  <span className="text-xs font-bold text-[#C69A3C] uppercase tracking-wider">{activeVideo.badge}</span>
                   <h3 className="text-xl font-bold font-serif">{activeVideo.name}</h3>
                 </div>
                 <button 
@@ -302,7 +302,7 @@ export default function TechnologyPage() {
         )}
 
         {/* --- BOOKING CTA --- */}
-        <div className="bg-gradient-to-r from-[rgb(20,42,98)] via-blue-950 to-[rgb(20,42,98)] text-white rounded-3xl p-8 sm:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 border border-[#D4AF37]/30">
+        <div className="bg-gradient-to-r from-[rgb(20,42,98)] via-blue-950 to-[rgb(20,42,98)] text-white rounded-3xl p-8 sm:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 border border-[#C69A3C]/30">
           <div className="space-y-2 text-center md:text-left">
             <h3 className="text-2xl sm:text-3xl font-serif font-bold">Interested in our specialized rehabilitation equipment?</h3>
             <p className="text-blue-100 text-sm sm:text-base">Consult with our lead physical therapy team in Borivali West.</p>
@@ -310,7 +310,7 @@ export default function TechnologyPage() {
           <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-8 py-4 bg-[#D4AF37] text-[rgb(20,42,98)] font-bold rounded-xl text-sm hover:bg-white transition-colors shadow-lg text-center"
+              className="w-full sm:w-auto px-8 py-4 bg-[#C69A3C] text-[rgb(20,42,98)] font-bold rounded-xl text-sm hover:bg-white transition-colors shadow-lg text-center"
             >
               Book Assessment
             </Link>
@@ -327,3 +327,4 @@ export default function TechnologyPage() {
     </div>
   );
 }
+

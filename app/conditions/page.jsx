@@ -125,7 +125,7 @@ export default function ConditionsHub() {
       
       {/* --- HERO BANNER --- */}
       <section className="relative pt-32 pb-20 bg-[rgb(20,42,98)] text-white overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#C69A3C]/10 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
           
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-1.5 rounded-full text-xs font-bold text-[#E5C158] uppercase tracking-widest">
@@ -150,7 +150,7 @@ export default function ConditionsHub() {
                 placeholder="Search by condition or symptom (e.g., lower back, sciatica, knee, stroke)..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-2xl bg-white text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-[#D4AF37]/40 shadow-xl font-medium text-sm sm:text-base transition-all"
+                className="w-full pl-12 pr-4 py-4 rounded-2xl bg-white text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-[#C69A3C]/40 shadow-xl font-medium text-sm sm:text-base transition-all"
               />
               {searchQuery && (
                 <button 
@@ -169,7 +169,7 @@ export default function ConditionsHub() {
               onClick={() => setSelectedCategory("all")}
               className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
                 selectedCategory === "all"
-                  ? "bg-[#D4AF37] text-[rgb(20,42,98)] shadow-md"
+                  ? "bg-[#C69A3C] text-[rgb(20,42,98)] shadow-md"
                   : "bg-white/10 text-white hover:bg-white/20"
               }`}
             >
@@ -181,7 +181,7 @@ export default function ConditionsHub() {
                 onClick={() => setSelectedCategory(cat.id)}
                 className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
                   selectedCategory === cat.id
-                    ? "bg-[#D4AF37] text-[rgb(20,42,98)] shadow-md"
+                    ? "bg-[#C69A3C] text-[rgb(20,42,98)] shadow-md"
                     : "bg-white/10 text-white hover:bg-white/20"
                 }`}
               >
@@ -247,21 +247,21 @@ export default function ConditionsHub() {
                       <Link
                         key={item.slug}
                         href={`/conditions/${item.slug}`}
-                        className="group bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#D4AF37] transition-all duration-300 flex flex-col justify-between"
+                        className="group bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#C69A3C] transition-all duration-300 flex flex-col justify-between"
                       >
                         <div className="space-y-3">
                           <div className="flex items-center justify-between">
                             <h3 className="font-bold text-slate-900 text-lg group-hover:text-[rgb(20,42,98)] transition-colors">
                               {item.name}
                             </h3>
-                            <ChevronRight size={18} className="text-[#D4AF37] group-hover:translate-x-1 transition-transform" />
+                            <ChevronRight size={18} className="text-[#C69A3C] group-hover:translate-x-1 transition-transform" />
                           </div>
                           <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
                             {item.desc}
                           </p>
                         </div>
 
-                        <div className="pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-bold text-[rgb(20,42,98)] group-hover:text-[#D4AF37] transition-colors">
+                        <div className="pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-bold text-[rgb(20,42,98)] group-hover:text-[#C69A3C] transition-colors">
                           <span>View Symptoms &amp; Protocol</span>
                           <ArrowRight size={14} />
                         </div>
@@ -283,7 +283,7 @@ export default function ConditionsHub() {
           </div>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 bg-[#D4AF37] text-[rgb(20,42,98)] font-bold px-8 py-4 rounded-xl text-base hover:bg-white transition-colors shadow-lg shrink-0 relative z-10"
+            className="inline-flex items-center justify-center gap-2 bg-[#C69A3C] text-[rgb(20,42,98)] font-bold px-8 py-4 rounded-xl text-base hover:bg-white transition-colors shadow-lg shrink-0 relative z-10"
           >
             <span>Book Clinical Assessment</span>
             <ArrowRight size={18} />
@@ -294,3 +294,4 @@ export default function ConditionsHub() {
     </div>
   );
 }
+

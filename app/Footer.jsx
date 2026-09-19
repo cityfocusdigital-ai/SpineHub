@@ -83,7 +83,7 @@ export default function MedicalFooter() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative mb-20 overflow-hidden rounded-3xl border border-[#D4AF37]/30 shadow-2xl shadow-black/40"
+          className="relative mb-20 overflow-hidden rounded-3xl border border-[#C69A3C]/30 shadow-2xl shadow-black/40"
         >
           {/* Gradient Background for CTA */}
           <div className="bg-[#142a62]" />
@@ -92,13 +92,13 @@ export default function MedicalFooter() {
           <div className="relative flex flex-col lg:flex-row items-center justify-between gap-8 p-8 md:p-12 bg-[#142a62]">
 
             <div className="max-w-2xl space-y-4 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/30 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#D4AF37] backdrop-blur-md">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#C69A3C]/15 border border-[#C69A3C]/30 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#C69A3C] backdrop-blur-md">
                 <ShieldCheck size={14} />
                 <span>Trusted Spine Care</span>
               </div>
 
               <h3 className="text-3xl font-extrabold text-white sm:text-4xl leading-tight">
-                Ready to Live a <span className="text-[#D4AF37]">Pain-Free Life?</span>
+                Ready to Live a <span className="text-[#C69A3C]">Pain-Free Life?</span>
               </h3>
 
               <p className="text-blue-100/90 text-sm md:text-base leading-relaxed max-w-lg mx-auto lg:mx-0">
@@ -113,13 +113,13 @@ export default function MedicalFooter() {
                 whileTap={{ scale: 0.98 }}
                 className="flex-1 lg:flex-none inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 border border-white/20 px-6 py-4 text-sm font-bold text-white transition-all hover:bg-white/20 group"
               >
-                <Phone size={18} className="text-[#D4AF37] group-hover:text-white transition-colors" />
+                <Phone size={18} className="text-[#C69A3C] group-hover:text-white transition-colors" />
                 <span>Call Now</span>
               </motion.a>
 
               <Link
                 href="/contact"
-                className="flex-1 lg:flex-none inline-flex items-center justify-center gap-2 rounded-xl bg-[#D4AF37] px-8 py-4 text-sm font-bold text-[rgb(20,42,98)] shadow-lg transition-all hover:bg-white flex items-center justify-center gap-2"
+                className="flex-1 lg:flex-none inline-flex items-center justify-center gap-2 rounded-xl bg-[#C69A3C] px-8 py-4 text-sm font-bold text-[rgb(20,42,98)] shadow-lg transition-all hover:bg-white flex items-center justify-center gap-2"
               >
                 <CalendarCheck size={18} />
                 <span>Book Appointment</span>
@@ -165,15 +165,15 @@ export default function MedicalFooter() {
           {/* Column 2: Our Specialties */}
           <motion.div variants={itemVariants} className="lg:col-span-3">
             <h4 className="mb-6 text-base font-bold text-white tracking-wide flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#c5973e]" />
+              <span className="h-2 w-2 rounded-full bg-[#C69A3C]" />
               Our Specialties
             </h4>
             <ul className="space-y-3">
               {specialties.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href || '/services'} className="group flex items-center justify-between text-sm text-white transition-colors hover:text-[#c5973e]">
+                  <Link href={item.href || '/services'} className="group flex items-center justify-between text-sm text-white transition-colors hover:text-[#C69A3C]">
                     <span className="flex items-center gap-2">
-                      <ChevronRight size={14} className="text-white transition-transform group-hover:translate-x-1 group-hover:text-[#c5973e]" />
+                      <ChevronRight size={14} className="text-white transition-transform group-hover:translate-x-1 group-hover:text-[#C69A3C]" />
                       {item.name}
                     </span>
                     {item.badge && (
@@ -190,7 +190,7 @@ export default function MedicalFooter() {
           {/* Column 3: Navigation */}
           <motion.div variants={itemVariants} className="lg:col-span-2">
             <h4 className="mb-6 text-base font-bold text-white tracking-wide flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#c5973e]" />
+              <span className="h-2 w-2 rounded-full bg-[#C69A3C]" />
               Navigation
             </h4>
             <ul className="space-y-3">
@@ -199,7 +199,7 @@ export default function MedicalFooter() {
                   <Link href={link.href} className="group inline-flex items-center text-sm text-white transition-colors hover:text-white">
                     <span className="relative">
                       {link.name}
-                      <span className="absolute -bottom-0.5 left-0 h-[1.5px] w-0 bg-[#c5973e] transition-all duration-300 group-hover:w-full" />
+                      <span className="absolute -bottom-0.5 left-0 h-[1.5px] w-0 bg-[#C69A3C] transition-all duration-300 group-hover:w-full" />
                     </span>
                   </Link>
                 </li>
@@ -210,7 +210,7 @@ export default function MedicalFooter() {
           {/* Column 4: Contact Info */}
           <motion.div variants={itemVariants} className="lg:col-span-3">
             <h4 className="mb-6 text-base font-bold text-white tracking-wide flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#c5973e]" />
+              <span className="h-2 w-2 rounded-full bg-[#C69A3C]" />
               Get In Touch
             </h4>
             <div className="space-y-5 rounded-2xl bg-white/5 p-6 border border-white/10 backdrop-blur-md shadow-lg">
@@ -220,7 +220,7 @@ export default function MedicalFooter() {
                 rel="noopener noreferrer"
                 className="flex items-start gap-3.5 group transition-colors"
               >
-                <div className="p-2 rounded-lg bg-[#0f4c81] text-white shrink-0 group-hover:bg-[#c5973e] transition-colors">
+                <div className="p-2 rounded-lg bg-[#0f4c81] text-white shrink-0 group-hover:bg-[#C69A3C] transition-colors">
                   <MapPin size={16} />
                 </div>
                 <p className="text-xs leading-relaxed text-blue-100/80 group-hover:text-white transition-colors">
@@ -243,7 +243,7 @@ export default function MedicalFooter() {
                   href="mailto:adityaspinerehab@gmail.com"
                   className="flex items-center justify-center gap-1.5 rounded-xl bg-white/10 border border-white/10 py-2.5 text-xs font-semibold text-white transition-all hover:bg-[#0f4c81] hover:border-[#0f4c81]"
                 >
-                  <Mail size={14} className="text-[#c5973e]" /> Email
+                  <Mail size={14} className="text-[#C69A3C]" /> Email
                 </a>
                 <a
                   href="https://www.adityaspinerehab.com"
@@ -251,7 +251,7 @@ export default function MedicalFooter() {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-1.5 rounded-xl bg-white/10 border border-white/10 py-2.5 text-xs font-semibold text-white transition-all hover:bg-[#0f4c81] hover:border-[#0f4c81]"
                 >
-                  <Globe size={14} className="text-[#c5973e]" /> Website
+                  <Globe size={14} className="text-[#C69A3C]" /> Website
                 </a>
               </div>
             </div>

@@ -28,25 +28,12 @@ const manrope = Manrope({
 export default function HomePage() {
   const shouldReduceMotion = useReducedMotion();
 
-  const photoRef = useRef(null);
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
-
   const trustItems = [
     "Experienced clinical leadership",
     "Personalized programmes",
     "Advanced rehabilitation technology",
     "Close to Borivali Station",
   ];
-
-  // 3D Tilt Effect for Image
-  const handlePhotoMove = (e) => {
-    if (shouldReduceMotion || !photoRef.current) return;
-    const rect = photoRef.current.getBoundingClientRect();
-    const px = (e.clientX - rect.left) / rect.width - 0.5;
-    const py = (e.clientY - rect.top) / rect.height - 0.5;
-    setTilt({ x: py * -6, y: px * 8 });
-  };
-  const resetTilt = () => setTilt({ x: 0, y: 0 });
 
   const scrollToNext = () => {
     document.getElementById('explore')?.scrollIntoView({ behavior: 'smooth' });
@@ -66,7 +53,7 @@ export default function HomePage() {
 
   return (
     <div
-      className={`${fraunces.variable} ${manrope.variable} relative min-h-screen bg-slate-50 selection:bg-[#D4AF37] selection:text-[rgb(20,42,98)]`}
+      className={`${fraunces.variable} ${manrope.variable} relative min-h-screen bg-slate-50 selection:bg-[#C69A3C] selection:text-[rgb(20,42,98)]`}
       style={{ fontFamily: 'var(--font-body)' }}
     >
       {/* Global Styles for Smooth Scroll */}
@@ -99,14 +86,14 @@ export default function HomePage() {
           {/* Left Content */}
           <motion.div variants={containerVariants} initial="hidden" animate="show">
             <motion.div variants={itemVariants} className="flex items-center gap-3 mb-7">
-              <span className="w-8 h-[1.5px] bg-[#D6C299]" />
+              <span className="w-8 h-[1.5px] bg-[#C69A3C]" />
               <a 
                 href="https://maps.app.goo.gl/3yBJLrYM5BcRdoX87"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-white/90 text-sm font-medium hover:text-[#D6C299] transition-colors"
+                className="flex items-center gap-1.5 text-white/90 text-sm font-medium hover:text-[#C69A3C] transition-colors"
               >
-                <MapPin size={14} className="text-[#D6C299]" />
+                <MapPin size={14} className="text-[#C69A3C]" />
                 Borivali West, Mumbai
               </a>
             </motion.div>
@@ -117,7 +104,7 @@ export default function HomePage() {
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Advanced Spine, Joint &amp;{" "}
-              <span className="bold text-[#ffaa00]">Neuro Rehabilitation</span>{" "}
+              <span className="bold text-[#C69A3C]">Neuro Rehabilitation</span>{" "}
               in Borivali West
             </motion.h1>
 
@@ -130,7 +117,7 @@ export default function HomePage() {
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row sm:items-start gap-4 mb-10">
               <Link 
                 href="/contact"
-                className="px-7 py-3.5 bg-[#f5a70b] hover:bg-[#ffa600] text-[#ffffff] font-semibold rounded-full transition-colors shadow-lg shadow-[#D6C299]/20 inline-block text-center"
+                className="px-7 py-3.5 bg-[#C69A3C] hover:bg-[#b08535] text-[#ffffff] font-semibold rounded-full transition-colors shadow-lg shadow-[#C69A3C]/20 inline-block text-center"
               >
                 Book an Assessment
               </Link>
@@ -154,14 +141,13 @@ export default function HomePage() {
                     WhatsApp
                   </a>
                 </div>
-     
               </div>
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-x-3 gap-y-2 max-w-lg">
               {trustItems.map((item, i) => (
                 <span key={item} className="flex items-center gap-3 text-white text-[13px] sm:text-sm">
-                  {i >= 0 && <span className="text-[#e8a318]" aria-hidden="true">•</span>}
+                  {i >= 0 && <span className="text-[#C69A3C]" aria-hidden="true">•</span>}
                   {item}
                 </span>
               ))}
@@ -175,39 +161,26 @@ export default function HomePage() {
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.35 }}
             className="relative hidden sm:block"
           >
-            {/* Decorative rotating gold ring */}
-            <motion.svg
+            {/* Decorative gold ring */}
+            <svg
               viewBox="0 0 400 400"
               className="absolute -top-10 -right-10 w-[340px] h-[340px] lg:w-[420px] lg:h-[420px] opacity-30 pointer-events-none -z-0"
-              animate={shouldReduceMotion ? {} : { rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
             >
-              <circle cx="200" cy="200" r="180" fill="none" stroke="#D6C299" strokeWidth="1.5" strokeDasharray="2 14" strokeLinecap="round" />
-            </motion.svg>
+              <circle cx="200" cy="200" r="180" fill="none" stroke="#C69A3C" strokeWidth="1.5" strokeDasharray="2 14" strokeLinecap="round" />
+            </svg>
 
-            <div
-              ref={photoRef}
-              onMouseMove={handlePhotoMove}
-              onMouseLeave={resetTilt}
-              style={{ perspective: 1000 }}
-              className="relative w-full max-w-[700px] aspect-[17/20]"
-            >
-              <motion.div
-                animate={{ rotateX: tilt.x, rotateY: tilt.y }}
-                transition={{ type: "spring", stiffness: 150, damping: 15 }}
-                className="relative aspect-[15/19] rounded-2xl overflow-hidden border-2 border-[#D6C299]/40 shadow-2xl shadow-black/30 bg-[#142A62]"
-              >
+            <div className="relative w-full max-w-[700px] aspect-[17/20]">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden border-2 border-[#C69A3C]/40 shadow-2xl shadow-black/30 bg-[#142A62]">
                 <img
                   src="/office.jpeg"
                   alt="Clinic Interior"
-                  className="absolute inset-0 w-full h-full object-contain p-1"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#004899]/40 via-transparent to-transparent pointer-events-none" />
                 
                 {/* Gold accent corners */}
-                <div className="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-[#D6C299]/60 rounded-tr-xl" />
-                <div className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-[#D6C299]/60 rounded-bl-xl" />
-              </motion.div>
+                <div className="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-[#C69A3C]/60 rounded-tr-xl pointer-events-none" />
+                <div className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-[#C69A3C]/60 rounded-bl-xl pointer-events-none" />
+              </div>
             </div>
           </motion.div>
         </div>
@@ -223,8 +196,6 @@ export default function HomePage() {
           <ScrollChevron size={26} />
         </motion.button>
       </section>
-
-
 
       {/* Rest of the page sections */}
       <div id="explore">

@@ -26,7 +26,7 @@ export default function ContactPage() {
           
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black mb-4 leading-tight tracking-tight text-white drop-shadow-md">
             Start Your Recovery At <br />
-            <span className="text-[#D4AF37]">Aditya Spine &amp; Joint Rehab</span>
+            <span className="text-[#C69A3C]">Aditya Spine &amp; Joint Rehab</span>
           </h1>
           
           <p className="text-blue-100/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-medium">
@@ -43,7 +43,7 @@ export default function ContactPage() {
           {/* Left Column: Deep Navy Contact Card (lg:sticky to avoid mobile scroll overlap) */}
           <div className="lg:col-span-5 bg-blue-950 rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10 border border-blue-900 text-white lg:sticky lg:top-24">
             <div className="flex items-center gap-4 mb-6 pb-6 border-b border-blue-900">
-              <div className="w-12 h-12 rounded-2xl bg-blue-900/60 flex items-center justify-center text-[#D4AF37] border border-blue-800 shrink-0">
+              <div className="w-12 h-12 rounded-2xl bg-blue-900/60 flex items-center justify-center text-[#C69A3C] border border-blue-800 shrink-0">
                 <MapPin size={24} />
               </div>
               <div>
@@ -66,11 +66,11 @@ export default function ContactPage() {
                 { icon: Clock, title: "Working Hours", content: ["Mon - Sat: 10:00 AM - 8:00 PM", "Sunday: By Appointment Only"] }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3.5 group">
-                  <div className="w-10 h-10 rounded-xl bg-blue-900/50 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-blue-950 transition-all duration-300 shrink-0 border border-blue-800">
+                  <div className="w-10 h-10 rounded-xl bg-blue-900/50 flex items-center justify-center text-[#C69A3C] group-hover:bg-[#C69A3C] group-hover:text-blue-950 transition-all duration-300 shrink-0 border border-blue-800">
                     <item.icon size={18} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-[#D4AF37] text-xs uppercase tracking-widest mb-1">{item.title}</h3>
+                    <h3 className="font-bold text-[#C69A3C] text-xs uppercase tracking-widest mb-1">{item.title}</h3>
                     <div className="text-slate-300 text-xs sm:text-sm leading-relaxed space-y-0.5">
                       {item.content.map((line, i) => (
                         item.isLink ? (
@@ -98,7 +98,7 @@ export default function ContactPage() {
                 href="https://maps.app.goo.gl/3yBJLrYM5BcRdoX87" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-3 w-full bg-[#D4AF37] hover:bg-white text-blue-950 px-6 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg text-xs sm:text-sm text-center"
+                className="group flex items-center justify-center gap-3 w-full bg-[#C69A3C] hover:bg-white text-blue-950 px-6 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg text-xs sm:text-sm text-center"
               >
                 <span>Get Directions on Google Maps</span>
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -216,3 +216,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

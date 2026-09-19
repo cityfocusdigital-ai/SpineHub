@@ -53,17 +53,17 @@ export default function CarePathways() {
     <section className="py-20 md:py-28 bg-slate-50 relative overflow-hidden">
       {/* Background Decorative Elements (Subtle & Elegant) */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#142A62]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#C69A3C]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Introduction Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="text-[#D4AF37] font-bold tracking-widest uppercase text-xs sm:text-sm mb-3 block">
+          <span className="text-[#C69A3C] font-bold tracking-widest uppercase text-xs sm:text-sm mb-3 block">
             Our Care Pathways
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(20,42,98)] mb-6 leading-tight">
-            Recovery Begins with <span className="text-[#D4AF37]">Understanding</span>
+            Recovery Begins with <span className="text-[#C69A3C]">Understanding</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
             At <strong className="text-[rgb(20,42,98)]">Aditya Spine &amp; Joint Rehab LLP</strong>, we assess your symptoms, posture, mobility, and strength before planning care. 
@@ -77,15 +77,15 @@ export default function CarePathways() {
             <Link
               key={item.id} 
               href={item.href}
-              className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-slate-200/80 hover:border-[#D4AF37]/50 flex flex-col justify-between cursor-pointer"
+              className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-200/80 hover:border-[#C69A3C]/50 flex flex-col justify-between cursor-pointer"
             >
               
               {/* 1. Top Image Container */}
-              <div className="relative h-52 sm:h-56 overflow-hidden bg-slate-100 flex items-center justify-center p-2">
+              <div className="relative h-52 sm:h-56 overflow-hidden bg-slate-100 flex items-center justify-center">
                 <img 
                   src={item.image} 
                   alt={item.title} 
-                  className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover"
                 />
 
                 {/* Floating Icon Box */}
@@ -107,7 +107,7 @@ export default function CarePathways() {
                 </div>
 
                 {/* Learn More Link */}
-                <div className="pt-3 border-t border-slate-100 flex items-center gap-2 text-[#D4AF37] group-hover:text-[#b38b1f] font-bold text-sm transition-colors">
+                <div className="pt-3 border-t border-slate-100 flex items-center gap-2 text-[#C69A3C] group-hover:text-[#a07a2a] font-bold text-sm transition-colors">
                   <span>Learn More</span>
                   <ArrowRight size={16} className="transform group-hover:translate-x-1.5 transition-transform" />
                 </div>
@@ -118,9 +118,9 @@ export default function CarePathways() {
         </div>
 
         {/* Bottom CTA Strip - Deep Royal Blue Banner */}
-        <div className="mt-16 bg-[rgb(20,42,98)] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden border border-[#D4AF37]/30">
+        <div className="mt-16 bg-[rgb(20,42,98)] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden border border-[#C69A3C]/30">
           {/* Subtle glow in CTA */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/15 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#C69A3C]/15 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
           <div className="text-white relative z-10 text-center md:text-left space-y-2">
             <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">Not sure which pathway is right for you?</h3>
@@ -128,7 +128,7 @@ export default function CarePathways() {
           </div>
           <Link 
             href="/contact"
-            className="relative z-10 px-8 py-4 bg-[#D4AF37] hover:bg-white text-[rgb(20,42,98)] font-bold rounded-xl transition-all shadow-lg shadow-black/20 flex items-center gap-2 whitespace-nowrap group shrink-0"
+            className="relative z-10 px-8 py-4 bg-[#C69A3C] hover:bg-white text-[rgb(20,42,98)] font-bold rounded-xl transition-all shadow-lg shadow-black/20 flex items-center gap-2 whitespace-nowrap group shrink-0"
           >
             <span>Book Assessment</span>
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

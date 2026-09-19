@@ -64,7 +64,7 @@ export default function PatientJourneyPage() {
       
       {/* --- HERO BANNER --- */}
       <section className="relative pt-32 pb-20 bg-[rgb(20,42,98)] text-white overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#C69A3C]/10 rounded-full blur-3xl pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-1.5 rounded-full text-xs font-bold text-[#E5C158] uppercase tracking-widest">
@@ -82,13 +82,13 @@ export default function PatientJourneyPage() {
 
           <div className="pt-4 flex flex-wrap justify-center gap-4 text-xs font-bold text-blue-200">
             <span className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-full border border-white/10">
-              <CheckCircle2 size={14} className="text-[#D4AF37]" /> Assessment-Led Care
+              <CheckCircle2 size={14} className="text-[#C69A3C]" /> Assessment-Led Care
             </span>
             <span className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-full border border-white/10">
-              <CheckCircle2 size={14} className="text-[#D4AF37]" /> Periodically Reassessed
+              <CheckCircle2 size={14} className="text-[#C69A3C]" /> Periodically Reassessed
             </span>
             <span className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-full border border-white/10">
-              <CheckCircle2 size={14} className="text-[#D4AF37]" /> Long-Term Recurrence Prevention
+              <CheckCircle2 size={14} className="text-[#C69A3C]" /> Long-Term Recurrence Prevention
             </span>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function PatientJourneyPage() {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-20 space-y-16">
         
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-[#D4AF37] font-bold uppercase tracking-wider text-xs">Step-By-Step Overview</span>
+          <span className="text-[#C69A3C] font-bold uppercase tracking-wider text-xs">Step-By-Step Overview</span>
           <h2 className="text-3xl sm:text-4xl font-serif text-[rgb(20,42,98)] font-bold">
             What You Can Expect At Every Stage
           </h2>
@@ -108,7 +108,7 @@ export default function PatientJourneyPage() {
         </div>
 
         {/* Vertical Timeline Card Layout */}
-        <div className="relative space-y-8 before:absolute before:inset-0 before:left-6 md:before:left-1/2 before:-translate-x-1/2 before:w-1 before:bg-gradient-to-b before:from-[rgb(20,42,98)] before:via-[#D4AF37] before:to-[rgb(20,42,98)]">
+        <div className="relative space-y-8 before:absolute before:inset-0 before:left-6 md:before:left-1/2 before:-translate-x-1/2 before:w-1 before:bg-gradient-to-b before:from-[rgb(20,42,98)] before:via-[#C69A3C] before:to-[rgb(20,42,98)]">
           {journeyStages.map((stage, idx) => {
             const IconComp = stage.icon;
             const isEven = idx % 2 === 0;
@@ -121,7 +121,7 @@ export default function PatientJourneyPage() {
                 }`}
               >
                 {/* Timeline Center Node Badge */}
-                <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[rgb(20,42,98)] text-[#D4AF37] border-4 border-white shadow-xl font-extrabold text-sm flex items-center justify-center z-20">
+                <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[rgb(20,42,98)] text-[#C69A3C] border-4 border-white shadow-xl font-extrabold text-sm flex items-center justify-center z-20">
                   {stage.step}
                 </div>
 
@@ -129,12 +129,12 @@ export default function PatientJourneyPage() {
                 <div className={`w-full md:w-1/2 pl-16 md:pl-0 ${
                   isEven ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"
                 }`}>
-                  <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 space-y-4 group hover:border-[#D4AF37]">
+                  <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 space-y-4 group hover:border-[#C69A3C]">
                     
                     <div className={`flex items-center gap-3 ${
                       isEven ? "md:justify-end" : "md:justify-start"
                     }`}>
-                      <div className="w-10 h-10 rounded-xl bg-[rgb(20,42,98)] text-[#D4AF37] flex items-center justify-center shadow-md">
+                      <div className="w-10 h-10 rounded-xl bg-[rgb(20,42,98)] text-[#C69A3C] flex items-center justify-center shadow-md">
                         <IconComp size={20} />
                       </div>
                       <span className={`px-3 py-1 rounded-full text-xs font-bold border ${stage.badgeBg}`}>
@@ -143,7 +143,7 @@ export default function PatientJourneyPage() {
                     </div>
 
                     <div className="space-y-1">
-                      <h3 className="text-xl sm:text-2xl font-serif font-bold text-[rgb(20,42,98)] group-hover:text-[#D4AF37] transition-colors">
+                      <h3 className="text-xl sm:text-2xl font-serif font-bold text-[rgb(20,42,98)] group-hover:text-[#C69A3C] transition-colors">
                         {stage.title}
                       </h3>
                       <p className="text-slate-500 font-medium text-xs sm:text-sm">
@@ -163,7 +163,7 @@ export default function PatientJourneyPage() {
         </div>
 
         {/* --- BOOKING CTA STRIP --- */}
-        <div className="mt-20 bg-gradient-to-r from-[rgb(20,42,98)] via-blue-950 to-[rgb(20,42,98)] text-white rounded-3xl p-8 sm:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 border border-[#D4AF37]/30">
+        <div className="mt-20 bg-gradient-to-r from-[rgb(20,42,98)] via-blue-950 to-[rgb(20,42,98)] text-white rounded-3xl p-8 sm:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 border border-[#C69A3C]/30">
           <div className="space-y-2 text-center md:text-left">
             <h3 className="text-2xl sm:text-3xl font-serif font-bold">Ready to start Stage 1 of your recovery journey?</h3>
             <p className="text-blue-100 text-sm sm:text-base">Schedule your initial consultation with our clinical team in Borivali West.</p>
@@ -171,7 +171,7 @@ export default function PatientJourneyPage() {
           <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-8 py-4 bg-[#D4AF37] text-[rgb(20,42,98)] font-bold rounded-xl text-sm hover:bg-white transition-colors shadow-lg text-center"
+              className="w-full sm:w-auto px-8 py-4 bg-[#C69A3C] text-[rgb(20,42,98)] font-bold rounded-xl text-sm hover:bg-white transition-colors shadow-lg text-center"
             >
               Book Initial Consultation
             </Link>
@@ -188,3 +188,4 @@ export default function PatientJourneyPage() {
     </div>
   );
 }
+
