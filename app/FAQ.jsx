@@ -129,15 +129,15 @@ export default function FAQ() {
         </div>
 
         {/* Quick Contact Box inside FAQ */}
-        <div className="mt-12 sm:mt-16 bg-[#142A62] rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+        <div className="mt-12 sm:mt-16 bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-center sm:text-left space-y-1">
-            <h3 className="text-xl font-bold">Have more questions or need clinical guidance?</h3>
-            <p className="text-white/80 text-sm">Reach out to our team via Call or WhatsApp for direct assistance.</p>
+            <h3 className="text-xl font-bold text-[rgb(20,42,98)]">Have more questions or need clinical guidance?</h3>
+            <p className="text-slate-600 text-sm">Reach out to our clinical team directly via Call or WhatsApp.</p>
           </div>
           <div className="flex items-center gap-3 shrink-0 w-full sm:w-auto">
             <a
               href="tel:7447755533"
-              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-[#D6C299] hover:bg-[#c5b085] text-[#142A62] font-bold px-5 py-3 rounded-xl text-sm transition-colors shadow-md"
+              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-[rgb(20,42,98)] hover:bg-[#1e3c8a] text-white font-bold px-5 py-3 rounded-xl text-sm transition-colors shadow-sm"
             >
               <Phone size={16} />
               <span>Call Us</span>
@@ -146,7 +146,7 @@ export default function FAQ() {
               href="https://wa.me/917447755533"
               target="_blank"
               rel="noreferrer"
-              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-5 py-3 rounded-xl text-sm transition-colors"
+              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-[#D4AF37] hover:bg-[#c5973e] text-[rgb(20,42,98)] font-bold px-5 py-3 rounded-xl text-sm transition-colors shadow-sm"
             >
               <MessageCircle size={16} />
               <span>WhatsApp</span>

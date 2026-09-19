@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { 
   Activity, 
   Bone, 
@@ -14,6 +15,7 @@ export default function CarePathways() {
     {
       id: 1,
       title: "Spine Rehabilitation",
+      href: "/conditions/lower-back-pain",
       icon: <Activity className="w-6 h-6" />, // Smaller icon for inside the glass card
       desc: "Personalized care for back pain, neck pain, sciatica, slipped disc, stiffness, postural strain and degenerative spine conditions.",
       // Image of someone doing yoga/stretching (Spine focus)
@@ -22,6 +24,7 @@ export default function CarePathways() {
     {
       id: 2,
       title: "Joint & spine Rehab",
+      href: "/conditions/knee-osteoarthritis",
       icon: <Bone className="w-6 h-6" />,
       desc: "Programmes for knee, shoulder, hip and other joint problems, sports injuries and recovery after orthopaedic surgery.",
       image: "/sp.png"
@@ -29,6 +32,7 @@ export default function CarePathways() {
     {
       id: 3,
       title: "Neuro Rehabilitation",
+      href: "/conditions/stroke-rehab",
       icon: <BrainCircuit className="w-6 h-6" />,
       desc: "Goal-based rehabilitation for stroke, paralysis, walking difficulty, balance problems and reduced strength or coordination.",
       // Image of medical/therapy setting
@@ -37,6 +41,7 @@ export default function CarePathways() {
     {
       id: 4,
       title: "Integrative Pain Care",
+      href: "/conditions/integrative-pain-care",
       icon: <HeartPulse className="w-6 h-6" />,
       desc: "Physiotherapy, manual therapy, chiropractic, osteopathy and supportive naturopathy approaches used responsibly within an individualized plan.",
       // Image of calm/nature/hands
@@ -45,87 +50,90 @@ export default function CarePathways() {
   ];
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
-      {/* Background Decorative Elements (Subtle) */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#0071bd]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#c5973e]/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+    <section className="py-20 md:py-28 bg-slate-50 relative overflow-hidden">
+      {/* Background Decorative Elements (Subtle & Elegant) */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#142A62]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Introduction Header */}
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="text-[#0071bd] font-bold tracking-widest uppercase text-sm mb-4 block">
-            Our Philosophy
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <span className="text-[#D4AF37] font-bold tracking-widest uppercase text-xs sm:text-sm mb-3 block">
+            Our Care Pathways
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0a1e3f] mb-6 leading-tight">
-            Recovery Begins with <span className="text-[#c5973e]">Understanding</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(20,42,98)] mb-6 leading-tight">
+            Recovery Begins with <span className="text-[#D4AF37]">Understanding</span>
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            At <strong className="text-[#0a1e3f]">Aditya Spine & Joint Rehab LLP</strong>, we assess your symptoms, posture, mobility, and strength before planning care. 
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+            At <strong className="text-[rgb(20,42,98)]">Aditya Spine &amp; Joint Rehab LLP</strong>, we assess your symptoms, posture, mobility, and strength before planning care. 
             Your programme combines guided exercise, hands-on therapy, and suitable rehabilitation technologies.
           </p>
         </div>
 
-        {/* 4 Main Care Pathways Grid - WITH IMAGES */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* 4 Main Care Pathways Grid - Clean White Medical Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {pathways.map((item) => (
-            <div 
+            <Link
               key={item.id} 
-              className="group relative min-h-[380px] sm:h-[440px] rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-slate-100 flex flex-col justify-end"
+              href={item.href}
+              className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-slate-200/80 hover:border-[#D4AF37]/50 flex flex-col justify-between cursor-pointer"
             >
               
-              {/* 1. Background Image with Mobile-Friendly Alignment */}
-              <div 
-                className="absolute inset-0 bg-cover bg-[center_top] sm:bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{ backgroundImage: `url(${item.image})` }}
-              ></div>
+              {/* 1. Top Image Container */}
+              <div className="relative h-52 sm:h-56 overflow-hidden bg-slate-100">
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgb(20,42,98)]/30 via-transparent to-transparent z-10" />
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
 
-              {/* 2. Dark Overlay (Gradient) - Clear top visual, readable bottom text */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-[#0a1e3f]/50 to-[#0a1e3f]/95 sm:from-[#0a1e3f]/10 sm:via-[#0a1e3f]/40 sm:to-[#0a1e3f]/90 group-hover:to-[#0a1e3f]/95 transition-colors duration-300"></div>
-
-              {/* 3. Content Container (Glass Effect) */}
-              <div className="relative p-5 sm:p-7 flex flex-col justify-end z-10 h-full">
-                
-                {/* Icon Box */}
-                <div className="absolute top-4 left-4 sm:top-6 sm:left-6">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/95 backdrop-blur-sm shadow-lg flex items-center justify-center text-[#0071bd]">
-                    {item.icon}
-                  </div>
-                </div>
-
-                {/* Text Content - Bottom Aligned */}
-                <div className="mt-auto space-y-2.5 sm:space-y-4 pt-16">
-                  <h3 className="text-lg sm:text-xl font-bold text-white leading-tight drop-shadow-md">
-                    {item.title}
-                  </h3>
-                  
-                  <p className="text-gray-200 text-xs sm:text-sm leading-relaxed line-clamp-3 sm:line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
-                    {item.desc}
-                  </p>
-
-                  {/* Learn More Link */}
-                  <div className="pt-1 sm:pt-2 flex items-center gap-2 text-[#c5973e] font-bold text-xs sm:text-sm opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 transform sm:translate-y-4 sm:group-hover:translate-y-0">
-                    Learn More <ArrowRight size={16} />
-                  </div>
+                {/* Floating Icon Box */}
+                <div className="absolute top-4 left-4 z-20 w-11 h-11 rounded-xl bg-white/95 backdrop-blur-md shadow-md flex items-center justify-center text-[rgb(20,42,98)] border border-slate-100">
+                  {item.icon}
                 </div>
               </div>
 
-            </div>
+              {/* 2. Card Content in Crisp White Body */}
+              <div className="p-6 sm:p-7 flex flex-col flex-grow justify-between bg-white">
+                <div>
+                  <h3 className="text-xl font-bold text-[rgb(20,42,98)] mb-3 group-hover:text-blue-900 transition-colors">
+                    {item.title}
+                  </h3>
+                  
+                  <p className="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-3">
+                    {item.desc}
+                  </p>
+                </div>
+
+                {/* Learn More Link */}
+                <div className="pt-3 border-t border-slate-100 flex items-center gap-2 text-[#D4AF37] group-hover:text-[#b38b1f] font-bold text-sm transition-colors">
+                  <span>Learn More</span>
+                  <ArrowRight size={16} className="transform group-hover:translate-x-1.5 transition-transform" />
+                </div>
+              </div>
+
+            </Link>
           ))}
         </div>
 
-        {/* Bottom CTA Strip */}
-        <div className="mt-16 bg-[#0a1e3f] rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
-           {/* Subtle glow in CTA */}
-           <div className="absolute top-0 right-0 w-64 h-64 bg-[#c5973e]/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+        {/* Bottom CTA Strip - Deep Royal Blue Banner */}
+        <div className="mt-16 bg-[rgb(20,42,98)] rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden border border-[#D4AF37]/30">
+          {/* Subtle glow in CTA */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/15 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
-          <div className="text-white relative z-10">
-            <h3 className="text-2xl font-bold mb-2">Not sure which pathway is right for you?</h3>
-            <p className="text-gray-300">Book a comprehensive assessment with our clinical team today.</p>
+          <div className="text-white relative z-10 text-center md:text-left space-y-2">
+            <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">Not sure which pathway is right for you?</h3>
+            <p className="text-blue-100 text-sm sm:text-base">Book a comprehensive physical assessment with our clinical team today.</p>
           </div>
-          <button className="relative z-10 px-8 py-4 bg-[#c5973e] hover:bg-[#b08535] text-white font-bold rounded-xl transition-colors shadow-lg shadow-[#c5973e]/20 flex items-center gap-2 whitespace-nowrap group">
-            Book Assessment <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          <Link 
+            href="/contact"
+            className="relative z-10 px-8 py-4 bg-[#D4AF37] hover:bg-white text-[rgb(20,42,98)] font-bold rounded-xl transition-all shadow-lg shadow-black/20 flex items-center gap-2 whitespace-nowrap group shrink-0"
+          >
+            <span>Book Assessment</span>
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
 
       </div>

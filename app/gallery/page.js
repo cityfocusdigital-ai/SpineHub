@@ -5,21 +5,25 @@ import Image from 'next/image';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
 
-// Tumhare rehab center ke liye sample data
+// Clinic rehabilitation and facility gallery data
 const galleryData = [
   { id: 1, src: '/1.jpeg', alt: 'Spine Rehabilitation Session', category: 'treatment' },
-  { id: 2, src: '/2.jpeg', alt: 'Joint Therapy', category: 'therapy' },
+  { id: 2, src: '/2.jpeg', alt: 'Targeted Joint Therapy', category: 'therapy' },
   { id: 3, src: '/3.jpeg', alt: 'Therapeutic Exercises', category: 'exercise' },
   { id: 4, src: '/4.jpeg', alt: 'Modern Clinic Facility', category: 'facility' },
   { id: 5, src: '/5.jpeg', alt: 'Personalized Patient Care', category: 'treatment' },
   { id: 6, src: '/6.jpeg', alt: 'Advanced Equipment', category: 'facility' },
- 
-  { id: 12, src: '/12.jpeg', alt: 'Recovery Progress', category: 'therapy' },
-  { id: 13, src: '/13.jpeg', alt: 'Recovery Progress', category: 'therapy' },
-  { id: 14, src: '/14.jpeg', alt: 'Recovery Progress', category: 'therapy' },
-  { id: 15, src: '/15.jpeg', alt: 'Recovery Progress', category: 'therapy' },
-  { id: 16, src: '/16.jpeg', alt: 'Recovery Progress', category: 'therapy' },
-  { id: 17, src: '/17.jpeg', alt: 'Recovery Progress', category: 'therapy' },
+  { id: 7, src: '/7.jpeg', alt: 'Mobility & Gait Training', category: 'exercise' },
+  { id: 8, src: '/8.jpeg', alt: 'Neuromuscular Re-education', category: 'therapy' },
+  { id: 9, src: '/9.jpeg', alt: 'Postural Correction & Spine Care', category: 'treatment' },
+  { id: 10, src: '/10.jpeg', alt: 'Guided Strengthening Routine', category: 'exercise' },
+  { id: 11, src: '/11.jpeg', alt: 'Clinical Assessment & Consultation', category: 'treatment' },
+  { id: 12, src: '/12.jpeg', alt: 'Recovery Milestone Progress', category: 'therapy' },
+  { id: 13, src: '/13.jpeg', alt: 'Functional Movement Training', category: 'exercise' },
+  { id: 14, src: '/14.jpeg', alt: 'Dedicated Patient Care', category: 'treatment' },
+  { id: 15, src: '/15.jpeg', alt: 'Specialized Joint Mobilization', category: 'therapy' },
+  { id: 16, src: '/16.jpeg', alt: 'Active Rehabilitation Therapy', category: 'therapy' },
+  { id: 17, src: '/17.jpeg', alt: 'Patient Consultation & Wellness', category: 'treatment' },
 ];
 
 const categories = [
@@ -67,7 +71,7 @@ export default function GalleryPage() {
             priority
           />
           {/* Navy Blue Gradient Overlay as per your preference */}
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-95/80 via-blue-900/60 to-slate-50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-950/80 via-blue-900/60 to-slate-50" />
         </motion.div>
         
         <div className="relative z-10 h-full flex items-center justify-center">

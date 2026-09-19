@@ -54,7 +54,13 @@ export default function ContactPage() {
             
             <div className="space-y-6">
               {[
-                { icon: MapPin, title: "Address", content: ["3rd Floor, Sushila Mayekar Shopping Centre", "L.T. Road, beside Radha Krishna Hotel", "near Borivali Station, Mumbai – 400092"] },
+                { 
+                  icon: MapPin, 
+                  title: "Address", 
+                  content: ["3rd Floor, Sushila Mayekar Shopping Centre", "L.T. Road, beside Radha Krishna Hotel", "near Borivali Station, Mumbai – 400092"],
+                  isLink: true,
+                  customHref: "https://maps.app.goo.gl/3yBJLrYM5BcRdoX87"
+                },
                 { icon: Phone, title: "Call / WhatsApp", content: ["+91 7447755533", "+91 9090293232"], isLink: true, hrefPrefix: "tel:" },
                 { icon: Mail, title: "Email Us", content: ["adityaspinerehab@gmail.com"], isLink: true, hrefPrefix: "mailto:" },
                 { icon: Clock, title: "Working Hours", content: ["Mon - Sat: 10:00 AM - 8:00 PM", "Sunday: By Appointment Only"] }
@@ -68,7 +74,13 @@ export default function ContactPage() {
                     <div className="text-slate-300 text-xs sm:text-sm leading-relaxed space-y-0.5">
                       {item.content.map((line, i) => (
                         item.isLink ? (
-                          <a key={i} href={`${item.hrefPrefix}${line.replace(/\s/g, '')}`} className="block hover:text-white transition-colors font-medium">
+                          <a 
+                            key={i} 
+                            href={item.customHref ? item.customHref : `${item.hrefPrefix}${line.replace(/\s/g, '')}`} 
+                            target={item.customHref ? "_blank" : undefined}
+                            rel={item.customHref ? "noopener noreferrer" : undefined}
+                            className="block hover:text-white transition-colors font-medium"
+                          >
                             {line}
                           </a>
                         ) : (
@@ -82,14 +94,15 @@ export default function ContactPage() {
             </div>
 
             <div className="mt-8 pt-6 border-t border-blue-900">
-              <Link 
-                href="https://maps.google.com/?q=Aditya+Spine+&+Joint+Rehab+Borivali+West" 
+              <a 
+                href="https://maps.app.goo.gl/3yBJLrYM5BcRdoX87" 
                 target="_blank"
+                rel="noopener noreferrer"
                 className="group flex items-center justify-center gap-3 w-full bg-[#D4AF37] hover:bg-white text-blue-950 px-6 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg text-xs sm:text-sm text-center"
               >
                 <span>Get Directions on Google Maps</span>
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
             </div>
           </div>
 

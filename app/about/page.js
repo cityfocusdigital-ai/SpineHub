@@ -16,12 +16,9 @@ import {
   ChevronRight,
   Award,
   Sparkles,
-  ArrowUpRight,
   CalendarCheck,
   Compass,
-  Clock,
   Building2,
-  Palette,
   FileText,
   PhoneCall
 } from 'lucide-react';
@@ -292,7 +289,7 @@ export default function AboutPage() {
           </motion.div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {coreValues.map((value, index) => {
               const IconComp = value.icon;
               const isHovered = activeValue === index;
@@ -306,8 +303,8 @@ export default function AboutPage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   onMouseEnter={() => setActiveValue(index)}
                   onMouseLeave={() => setActiveValue(null)}
-                  whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                  className="relative rounded-3xl bg-white border border-slate-200/80 shadow-md hover:shadow-2xl hover:border-[#D4AF37] transition-all duration-500 overflow-hidden group flex flex-col justify-between min-h-[340px]"
+                  whileHover={{ y: -6, transition: { duration: 0.3 } }}
+                  className="relative rounded-2xl sm:rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#D4AF37] transition-all duration-500 overflow-hidden group flex flex-col justify-between"
                 >
                   
                   {/* Hover Image Reveal */}
@@ -320,45 +317,34 @@ export default function AboutPage() {
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-95 transition-opacity duration-500" style={{ background: 'linear-gradient(to top, rgb(20, 42, 98), rgba(20, 42, 98, 0.9), rgba(20, 42, 98, 0.75))' }} />
 
                   {/* Card Top Bar */}
-                  <div className="relative z-10 p-7 flex items-center justify-between">
+                  <div className="relative z-10 p-5 sm:p-6 pb-3 flex items-center justify-between">
                     <motion.div 
-                      whileHover={{ scale: 1.15, rotate: 6 }}
+                      whileHover={{ scale: 1.12, rotate: 5 }}
                       transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                      className="p-3.5 rounded-2xl bg-slate-50 text-[rgb(20,42,98)] group-hover:bg-[#D4AF37] group-hover:text-[rgb(20,42,98)] transition-colors duration-500 shadow-sm"
+                      className="p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-slate-50 text-[rgb(20,42,98)] group-hover:bg-[#D4AF37] group-hover:text-[rgb(20,42,98)] transition-colors duration-500 shadow-sm"
                     >
-                      <IconComp size={24} />
+                      <IconComp size={20} className="sm:w-[22px] sm:h-[22px]" />
                     </motion.div>
 
                     <div className="flex items-center gap-2">
-                      <span className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 text-slate-500 group-hover:bg-white/10 group-hover:text-white/90 transition-colors">
+                      <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 text-slate-500 group-hover:bg-white/10 group-hover:text-white/90 transition-colors">
                         {value.tag}
                       </span>
-                      <span className="font-serif text-2xl font-bold text-slate-300 group-hover:text-[#D4AF37]/60 transition-colors">
+                      <span className="font-serif text-xl sm:text-2xl font-bold text-slate-300 group-hover:text-[#D4AF37]/60 transition-colors">
                         {value.id}
                       </span>
                     </div>
                   </div>
 
                   {/* Card Content */}
-                  <div className="relative z-10 p-7 pt-0 space-y-3">
-                    <h4 className="text-xl font-bold text-slate-900 group-hover:text-white transition-colors duration-300 leading-snug">
+                  <div className="relative z-10 px-5 sm:px-6 pb-6 pt-1 space-y-2 flex-grow">
+                    <h4 className="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-white transition-colors duration-300 leading-snug">
                       {value.title}
                     </h4>
 
                     <p className="text-xs sm:text-sm text-slate-600 group-hover:text-slate-200 transition-colors duration-300 leading-relaxed">
                       {value.desc}
                     </p>
-                  </div>
-
-                  {/* Bottom Bar Accent */}
-                  <div className="relative z-10 px-7 py-4 border-t border-slate-100 group-hover:border-white/10 flex items-center justify-between text-xs font-semibold text-[rgb(20,42,98)] group-hover:text-white transition-colors">
-                    <span>Clinical Standard</span>
-                    <motion.div
-                      animate={{ x: isHovered ? 4 : 0, y: isHovered ? -4 : 0 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <ArrowUpRight size={18} className="text-[#D4AF37] transition-colors" />
-                    </motion.div>
                   </div>
 
                   {/* Bottom Beam Glow (Gold) */}
@@ -371,11 +357,11 @@ export default function AboutPage() {
         </div>
 
         {/* =========================================================================
-            6. EXECUTIVE DIRECTION & CLINICAL STANDARDS
+            6. CLINICAL PHILOSOPHY & COMMITMENTS
            ========================================================================= */}
         <div className="relative pt-16 border-t border-slate-200/80 mt-16 space-y-16">
           
-          {/* Executive Direction Main Banner */}
+          {/* Clinical Philosophy Main Banner */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -388,7 +374,7 @@ export default function AboutPage() {
             <div className="relative z-10 max-w-4xl space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#E5C158] text-xs font-bold uppercase tracking-widest">
                 <Compass size={14} className="text-[#E5C158]" />
-                <span>1. Executive Direction</span>
+                <span>Our Clinical Philosophy</span>
               </div>
 
               <h3 className="text-3xl sm:text-4xl font-serif text-white leading-tight">
@@ -396,13 +382,13 @@ export default function AboutPage() {
               </h3>
 
               <p className="text-slate-200 text-base sm:text-lg leading-relaxed">
-                Aditya Spine & Joint Rehab LLP is presented as a specialist rehabilitation centre—not as a collection of machines or one-off physiotherapy sessions. Our central promise is a careful clinical assessment, a personalized programme, and progress that is rigorously tracked through pain relief, mobility, strength, and day-to-day function.
+                Aditya Spine &amp; Joint Rehab LLP is a dedicated specialist rehabilitation centre—not a collection of machines or one-off physiotherapy sessions. Our central promise is a careful clinical assessment, a personalized programme, and progress that is rigorously tracked through pain relief, mobility, strength, and day-to-day function.
               </p>
 
               {/* Core Line Highlight Box */}
               <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-md border-l-4 border-[#D4AF37] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div>
-                  <span className="text-xs font-bold text-[#E5C158] uppercase tracking-wider block mb-1">Recommended Core Line</span>
+                  <span className="text-xs font-bold text-[#E5C158] uppercase tracking-wider block mb-1">Our Guiding Motto</span>
                   <p className="text-xl sm:text-2xl font-serif text-white font-semibold italic">
                     "Advanced Care. Personalized Treatment. Lasting Results."
                   </p>
@@ -411,18 +397,18 @@ export default function AboutPage() {
             </div>
           </motion.div>
 
-          {/* 10-Second Communication Priorities */}
+          {/* Clinical Commitments */}
           <div className="space-y-8">
             <div className="text-center max-w-3xl mx-auto space-y-3">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#D4AF37]/10 text-[#B8860B] text-xs font-bold uppercase tracking-widest border border-[#D4AF37]/30">
-                <Clock size={14} className="text-[#D4AF37]" />
-                <span>Instant Patient Clarity</span>
+                <ShieldCheck size={14} className="text-[#D4AF37]" />
+                <span>Our Core Clinical Standards</span>
               </div>
               <h3 className="text-3xl sm:text-4xl font-serif tracking-tight" style={{ color: 'rgb(20, 42, 98)' }}>
-                What We Communicate Within 10 Seconds
+                Our Patient Care Commitments
               </h3>
-              <p className="text-slate-500 text-sm sm:text-base">
-                Key principles every patient discovers immediately upon visiting our clinic platform.
+              <p className="text-slate-600 text-sm sm:text-base">
+                The foundational clinical principles and patient-first values that define every treatment program at our clinic.
               </p>
             </div>
 
@@ -479,66 +465,6 @@ export default function AboutPage() {
                   </motion.div>
                 );
               })}
-            </div>
-          </div>
-
-          {/* Tone & Visual Personality Grid */}
-          <div className="space-y-8">
-            <div className="text-center max-w-3xl mx-auto space-y-3">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 text-slate-700 text-xs font-bold uppercase tracking-widest border border-slate-200">
-                <Palette size={14} className="text-[#D4AF37]" />
-                <span>Brand Identity</span>
-              </div>
-              <h3 className="text-3xl sm:text-4xl font-serif tracking-tight" style={{ color: 'rgb(20, 42, 98)' }}>
-                Tone & Visual Personality
-              </h3>
-            </div>
-
-            <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm">
-              <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200">
-                
-                {/* Left Column */}
-                <div className="p-6 sm:p-8 space-y-6">
-                  <div className="space-y-2">
-                    <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">Tone</span>
-                    <p className="text-slate-800 text-sm sm:text-base font-medium">
-                      Warm, reassuring, confident, ethical and easy for patients to understand.
-                    </p>
-                  </div>
-
-                  <div className="space-y-2 border-t border-slate-100 pt-6">
-                    <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">Brand Colours</span>
-                    <p className="text-slate-800 text-sm sm:text-base font-medium">
-                      Deep royal blue (<span className="text-[rgb(20,42,98)] font-bold">#142A62</span>), clean medical blue, crisp white, and restrained gold accents (<span className="text-[#D4AF37] font-bold">#D4AF37</span>).
-                    </p>
-                  </div>
-
-                  <div className="space-y-2 border-t border-slate-100 pt-6">
-                    <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">Imagery Standard</span>
-                    <p className="text-slate-800 text-sm sm:text-base font-medium">
-                      Real clinic, real team, supervised treatment, movement and genuine patient interaction. We avoid generic hospital stock images.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Right Column */}
-                <div className="p-6 sm:p-8 space-y-6 bg-slate-50/50">
-                  <div className="space-y-2">
-                    <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">Writing Language</span>
-                    <p className="text-slate-800 text-sm sm:text-base font-medium">
-                      Simple, accessible English first. Hindi and Marathi versions follow after final approval.
-                    </p>
-                  </div>
-
-                  <div className="space-y-2 border-t border-slate-200 pt-6">
-                    <span className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider">Ethical Claims Standard</span>
-                    <p className="text-slate-800 text-sm sm:text-base font-medium leading-relaxed">
-                      We strictly avoid promising a "cure", guaranteed recovery, or "100% results". Responsible clinical language used: <em className="text-[rgb(20,42,98)] font-semibold font-serif">"may help"</em>, <em className="text-[rgb(20,42,98)] font-semibold font-serif">"designed to"</em>, <em className="text-[rgb(20,42,98)] font-semibold font-serif">"supports"</em>, and <em className="text-[rgb(20,42,98)] font-semibold font-serif">"subject to clinical assessment"</em>.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
             </div>
           </div>
 

@@ -106,7 +106,7 @@ const SmoothDoctorProfile = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-32 overflow-hidden bg-[#f8fafc] text-black">
+    <section ref={sectionRef} className="relative py-20 md:py-32 overflow-hidden bg-slate-50 text-slate-800">
       {/* Smooth Parallax BG */}
       <div 
         ref={bgRef}
@@ -118,42 +118,40 @@ const SmoothDoctorProfile = () => {
         }}
       />
       
-      {/* Ambient Glows with Pulse Animation */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gry-500/15 rounded-full blur-[100px] animate-pulse-slow" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-grey-500/10 rounded-full blur-[100px] animate-pulse-slow delay-1000" />
+      {/* Ambient Glows with Subtle Pulse */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#142A62]/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#D4AF37]/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-4xl md:text-6xl font-bold text-black mb-6 tracking-tight">
-            Clinical <span className="text-transparent bg-clip-text bg-[#142a62]">Leadership</span>
+          <h2 className="text-4xl md:text-6xl font-bold text-[rgb(20,42,98)] mb-4 tracking-tight">
+            Clinical <span className="text-[#D4AF37]">Leadership</span>
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent mx-auto rounded-full" />
+          <div className="w-20 h-1.5 bg-[#D4AF37] mx-auto rounded-full" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* Image Column */}
           <div ref={imageRef} className="lg:col-span-5 relative group">
-            <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-blue-900/40 aspect-[4/5] md:aspect-[3/4] ring-1 ring-white/5">
+            <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl aspect-[4/5] md:aspect-[3/4] bg-white">
               <img 
                 src="/santosh_prajapati.jpeg" 
                 alt="Dr. Santosh Prajapati" 
                 className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
               />
-          
             </div>
-            
-            {/* Floating Badge */}
-            
           </div>
 
           {/* Content Column */}
           <div ref={contentRef} className="lg:col-span-7 space-y-8">
             
             <div>
-              <h3 className="text-3xl md:text-5xl font-bold text-black mb-4 leading-tight">Dr. Santosh Prajapati <span className="text-black ">(PT)</span></h3>
-              <p className="text-black font-medium text-lg md:text-xl flex flex-wrap gap-x-3 gap-y-1">
+              <h3 className="text-3xl md:text-5xl font-bold text-[rgb(20,42,98)] mb-3 leading-tight">
+                Dr. Santosh Prajapati <span className="text-slate-500 text-2xl md:text-3xl font-normal">(PT)</span>
+              </h3>
+              <p className="text-slate-600 font-medium text-base md:text-lg flex flex-wrap gap-x-3 gap-y-1">
                 <span>Senior Physiotherapist</span> • 
                 <span>Chiropractor</span> • 
                 <span>Osteopath</span> • 
@@ -161,64 +159,64 @@ const SmoothDoctorProfile = () => {
               </p>
             </div>
 
-            {/* Glassmorphism Qualifications */}
+            {/* Clean White Qualifications Card */}
             <div 
               ref={(el) => (cardsRef.current[0] = el)}
-              className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/[0.06] transition-colors duration-500 cursor-default"
+              className="bg-white rounded-2xl p-6 md:p-8 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              <h4 className="text-black font-semibold mb-5 flex items-center gap-3 text-xl">
-                <Award className="w-6 h-6 text-blue-400" />
-                Verified Qualifications
+              <h4 className="text-[rgb(20,42,98)] font-bold mb-5 flex items-center gap-3 text-lg sm:text-xl">
+                <Award className="w-6 h-6 text-[#D4AF37]" />
+                Verified Clinical Qualifications
               </h4>
-              <ul className="space-y-4 text-black">
+              <ul className="space-y-4 text-slate-700">
                 {[
                   "MPT (Orthopaedics)",
                   "MCSC Chiropractic (Japan)",
                   "PhD (Hons) Naturopathy"
                 ].map((qual, index) => (
-                  <li key={index} className="flex items-center gap-4 group/item">
-                    <div className="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0 group-hover/item:bg-blue-500/20 transition-colors">
-                      <CheckCircle2 className="w-4 h-4 text-blue-400" />
+                  <li key={index} className="flex items-center gap-4">
+                    <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
+                      <CheckCircle2 className="w-4 h-4 text-[#D4AF37]" />
                     </div>
-                    <span className="text-base md:text-lg group-hover/item:text-white transition-colors">{qual}</span>
+                    <span className="text-base md:text-lg font-medium text-slate-800">{qual}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="space-y-5 text-black leading-relaxed text-base md:text-lg font-light">
+            <div className="space-y-4 text-slate-600 leading-relaxed text-base md:text-lg">
               <p>
-                Dr. Santosh leads the clinical vision of <span className=" text-[#142a62] font-medium">Aditya Spine & Joint Rehab LLP</span>. 
-                His approach combines detailed examination, report review, movement assessment and individualized rehabilitation planning.
+                Dr. Santosh leads the clinical vision of <span className="text-[rgb(20,42,98)] font-semibold">Aditya Spine &amp; Joint Rehab LLP</span>. 
+                His approach combines detailed physical examination, imaging review, biomechanical assessment, and individualized rehabilitation planning.
               </p>
               <p>
-                His work integrates physiotherapy, chiropractic and osteopathic principles with rehabilitation exercise and suitable supportive modalities.
+                His practice integrates advanced physiotherapy, chiropractic adjustments, and osteopathic principles with targeted therapeutic exercises and suitable supportive modalities.
               </p>
             </div>
 
             {/* Interactive Highlight Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
               {[
-                { icon: Activity, title: "Years of Experience", desc: "Extensive experience in treating complex spine and joint conditions" },
-                { icon: HeartPulse, title: "Patient-Centric", desc: "Focus on improved function and long-term self-management" }
+                { icon: Activity, title: "Years of Experience", desc: "Extensive clinical track record in managing complex spinal and joint conditions" },
+                { icon: HeartPulse, title: "Patient-Centric Care", desc: "Targeted focus on restoring functional mobility and long-term self-management" }
               ].map((item, i) => (
                 <div 
                   key={i}
                   ref={(el) => (cardsRef.current[i + 1] = el)}
-                  className="bg-[#112240] p-6 rounded-2xl border border-blue-400 hover:bg-[#112240] transition-all duration-300 cursor-default"
+                  className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md hover:border-[#D4AF37]/50 transition-all duration-300"
                 >
-                  <item.icon className="w-7 h-7 text-blue-400 mb-3" />
-                  <h5 className="text-white font-semibold text-lg mb-2">{item.title}</h5>
-                  <p className="text-sm text-white leading-snug">{item.desc}</p>
+                  <item.icon className="w-7 h-7 text-[#D4AF37] mb-3" />
+                  <h5 className="text-[rgb(20,42,98)] font-bold text-lg mb-2">{item.title}</h5>
+                  <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
 
             {/* Signature Quote */}
-            <div className="bg-gradient-to-r from-gray-500/10 via-gray-500/5 to-transparent p-6 rounded-2xl border border-blue-500/10 flex items-start gap-4">
-              <ArrowRight className="w-6 h-6 text-black mt-1 shrink-0" />
-              <p className="text-black italic text-base md:text-lg leading-relaxed">
-                "Known for explaining complex spine and joint problems in simple language, helping patients move from pain management toward improved function."
+            <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex items-start gap-4">
+              <ArrowRight className="w-6 h-6 text-[#D4AF37] mt-1 shrink-0" />
+              <p className="text-slate-700 italic text-base md:text-lg leading-relaxed">
+                "Known for explaining complex spine and joint problems in simple, transparent language, guiding patients safely from acute pain toward lasting functional freedom."
               </p>
             </div>
 

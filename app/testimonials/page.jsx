@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star, Quote, PlayCircle, ExternalLink, MapPin, ShieldCheck, CheckCircle, Activity } from 'lucide-react';
+import { Star, Quote, ExternalLink, MapPin, ShieldCheck, CheckCircle, Activity } from 'lucide-react';
 
 // --- DATA: Aligned with Specific Clinical Themes ---
 const categories = [
@@ -20,8 +20,7 @@ const testimonials = [
     category: "Spine",
     rating: 5,
     theme: "Severe lower-back pain & MRI review",
-    text: "I had severe lower-back pain and difficulty sitting or performing daily activities. Dr. Aditya did a detailed examination and careful review of my MRI reports. The clear explanation gave me confidence in the treatment process. I am finally returning to my normal activities.",
-    hasVideo: true,
+    text: "I had severe lower-back pain and difficulty sitting or performing daily activities. Dr. Santosh did a detailed examination and careful review of my MRI reports. The clear explanation gave me confidence in the treatment process. I am finally returning to my normal activities.",
     date: "2 weeks ago"
   },
   {
@@ -31,7 +30,6 @@ const testimonials = [
     rating: 5,
     theme: "Sciatica & radiating leg pain",
     text: "Dealing with sciatica and radiating leg pain severely affected my walking and routine life. The team here is incredibly supportive. Through their guided, multi-step rehabilitation, I have seen a massive improvement in my movement and pain levels.",
-    hasVideo: true,
     date: "1 month ago"
   },
   {
@@ -41,7 +39,6 @@ const testimonials = [
     rating: 5,
     theme: "Reassurance & guided rehabilitation",
     text: "After my surgery, I had long-standing stiffness and reduced movement. The clinic provided immense reassurance. Their guided rehabilitation helped restore my mobility step-by-step. Genuine, ethical care that actually works.",
-    hasVideo: false,
     date: "3 weeks ago"
   },
   {
@@ -51,14 +48,12 @@ const testimonials = [
     rating: 5,
     theme: "Long-standing pain & stiffness",
     text: "I suffered from long-standing shoulder pain with severe stiffness. The detailed physical examination helped pinpoint the issue. Thanks to the supportive team, my pain has significantly reduced, and I can move my arm freely again.",
-    hasVideo: false,
     date: "2 months ago"
   }
 ];
 
 const TestimonialsPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedVideo, setSelectedVideo] = useState(null);
 
   const filteredTestimonials = activeCategory === "All" 
     ? testimonials 
@@ -135,7 +130,7 @@ const TestimonialsPage = () => {
               <p className="text-[11px] font-bold text-[#1a2b53] uppercase tracking-widest mb-6">Average Rating</p>
             </div>
             <a 
-              href="https://maps.google.com" 
+              href="https://maps.app.goo.gl/3yBJLrYM5BcRdoX87" 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full py-3.5 px-4 bg-[#1a2b53] text-white rounded-xl font-semibold hover:bg-[#111e3d] transition-all text-[15px] group"
@@ -203,15 +198,6 @@ const TestimonialsPage = () => {
                       <h4 className="font-bold text-[#1a2b53] text-base">{item.name}</h4>
                       <p className="text-[13px] text-slate-400">{item.date}</p>
                     </div>
-                    {item.hasVideo && (
-                      <button 
-                        onClick={() => setSelectedVideo("https://www.youtube.com/embed/dQw4w9WgXcQ")}
-                        className="flex items-center gap-2 px-4 py-2 bg-slate-50 rounded-full hover:bg-[#1a2b53] hover:text-white transition-all text-[#1a2b53] font-medium text-sm group/btn border border-slate-100 hover:border-[#1a2b53]"
-                      >
-                        <PlayCircle className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
-                        Watch Story
-                      </button>
-                    )}
                   </div>
                 </motion.div>
               ))}
@@ -231,47 +217,18 @@ const TestimonialsPage = () => {
             <span>All testimonials are genuine. Media used with explicit patient consent.</span>
           </div>
           <div className="hidden md:block w-1 h-1 rounded-full bg-slate-300"></div>
-          <div className="flex items-center gap-2.5">
+          <a 
+            href="https://maps.app.goo.gl/3yBJLrYM5BcRdoX87" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2.5 hover:text-[#1a2b53] transition-colors"
+          >
             <MapPin className="w-4 h-4 text-[#1a2b53]" />
-            <span>Aditya Spine & Joint Rehab, Borivali West</span>
-          </div>
+            <span>Aditya Spine &amp; Joint Rehab, Borivali West</span>
+          </a>
         </motion.div>
 
       </div>
-
-      {/* Video Modal */}
-      <AnimatePresence>
-        {selectedVideo && (
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-[#101b33]/90 backdrop-blur-sm p-4"
-            onClick={() => setSelectedVideo(null)}
-          >
-            <motion.div 
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              className="relative w-full max-w-4xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl border border-white/10"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <iframe 
-                src={selectedVideo} 
-                className="w-full h-full" 
-                title="Patient Testimonial Video" 
-                allowFullScreen
-              ></iframe>
-              <button 
-                onClick={() => setSelectedVideo(null)} 
-                className="absolute top-4 right-4 bg-black/50 hover:bg-white hover:text-[#1a2b53] text-white p-2.5 rounded-full transition-colors backdrop-blur-sm"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 };

@@ -62,10 +62,10 @@ export default function MedicalFooter() {
   };
 
   return (
-    <footer className="relative bg-[#000000] font-sans text-white overflow-hidden">
+    <footer className="relative bg-[#0a1633] font-sans text-white overflow-hidden">
 
-      {/* Background Decorative Radial Gradient with Classic Blue (#0f4c81) Highlights */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,#0f4c81_0%,transparent_60%)] opacity-50" />
+      {/* Background Decorative Radial Gradient with Deep Royal Blue Highlights */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,#142A62_0%,transparent_60%)] opacity-60" />
       <div className="pointer-events-none absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]" />
 
       <motion.div
@@ -83,27 +83,25 @@ export default function MedicalFooter() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative mb-20 overflow-hidden rounded-3xl border border-blue-500/30 shadow-2xl shadow-blue-900/40"
+          className="relative mb-20 overflow-hidden rounded-3xl border border-[#D4AF37]/30 shadow-2xl shadow-black/40"
         >
           {/* Gradient Background for CTA */}
           <div className="bg-[#142a62]" />
 
           {/* Decorative Glow inside CTA */}
-
-
-          <div className="relative flex flex-col lg:flex-row items-center justify-between gap-8 p-8 md:p-12 bg-[#142a62] ">
+          <div className="relative flex flex-col lg:flex-row items-center justify-between gap-8 p-8 md:p-12 bg-[#142a62]">
 
             <div className="max-w-2xl space-y-4 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-blue-400 backdrop-blur-md">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/30 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#D4AF37] backdrop-blur-md">
                 <ShieldCheck size={14} />
                 <span>Trusted Spine Care</span>
               </div>
 
               <h3 className="text-3xl font-extrabold text-white sm:text-4xl leading-tight">
-                Ready to Live a <span className="text-transparent bg-clip-text bg-[#f5a70b]">Pain-Free Life?</span>
+                Ready to Live a <span className="text-[#D4AF37]">Pain-Free Life?</span>
               </h3>
 
-              <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-lg mx-auto lg:mx-0">
+              <p className="text-blue-100/90 text-sm md:text-base leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Schedule your comprehensive spinal evaluation today. Advanced non-surgical treatments customized for your recovery journey.
               </p>
             </div>
@@ -113,18 +111,18 @@ export default function MedicalFooter() {
                 href="tel:+917447755533"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex-1 lg:flex-none inline-flex items-center justify-center gap-2 rounded-xl bg-white/5 border border-white/10 px-6 py-4 text-sm font-bold text-white transition-all hover:bg-white/10 hover:border-white/20 group"
+                className="flex-1 lg:flex-none inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 border border-white/20 px-6 py-4 text-sm font-bold text-white transition-all hover:bg-white/20 group"
               >
-                <Phone size={18} className="text-blue-400 group-hover:text-white transition-colors" />
+                <Phone size={18} className="text-[#D4AF37] group-hover:text-white transition-colors" />
                 <span>Call Now</span>
               </motion.a>
 
               <Link
                 href="/contact"
-                className="flex-1 lg:flex-none inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-sm font-bold text-white shadow-lg shadow-blue-600/20 transition-all hover:bg-blue-500"
+                className="flex-1 lg:flex-none inline-flex items-center justify-center gap-2 rounded-xl bg-[#D4AF37] px-8 py-4 text-sm font-bold text-[rgb(20,42,98)] shadow-lg transition-all hover:bg-white flex items-center justify-center gap-2"
               >
                 <CalendarCheck size={18} />
-                Book Appointment
+                <span>Book Appointment</span>
                 <ArrowRight size={16} className="opacity-70" />
               </Link>
             </div>
@@ -216,14 +214,19 @@ export default function MedicalFooter() {
               Get In Touch
             </h4>
             <div className="space-y-5 rounded-2xl bg-white/5 p-6 border border-white/10 backdrop-blur-md shadow-lg">
-              <div className="flex items-start gap-3.5">
-                <div className="p-2 rounded-lg bg-[#0f4c81] text-white shrink-0">
+              <a
+                href="https://maps.app.goo.gl/3yBJLrYM5BcRdoX87"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3.5 group transition-colors"
+              >
+                <div className="p-2 rounded-lg bg-[#0f4c81] text-white shrink-0 group-hover:bg-[#c5973e] transition-colors">
                   <MapPin size={16} />
                 </div>
-                <p className="text-xs leading-relaxed text-blue-100/80">
+                <p className="text-xs leading-relaxed text-blue-100/80 group-hover:text-white transition-colors">
                   3rd Floor, Sushila Mayekar Shopping Centre, LT Road, Borivali (W), Mumbai – 400092
                 </p>
-              </div>
+              </a>
 
               <div className="flex items-start gap-3.5">
                 <div className="p-2 rounded-lg bg-[#0f4c81] text-white shrink-0">
@@ -257,13 +260,13 @@ export default function MedicalFooter() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col items-center justify-between gap-4 text-xs text-blue md:flex-row">
+        <div className="border-t border-white/10 pt-8 flex flex-col items-center justify-between gap-4 text-xs text-slate-400 md:flex-row">
           <p className="text-center md:text-left">
             &copy; {new Date().getFullYear()} <span className="font-semibold text-white">Aditya Spine & Joint Rehab LLP</span>. All rights reserved.
           </p>
           <div className="flex items-center gap-6 font-medium">
-            <Link href="#" className="transition-colors hover:text-[#d7d6d3]">Privacy Policy</Link>
-            <Link href="#" className="transition-colors hover:text-[#eae9e8]">Terms of Service</Link>
+            <Link href="#" className="transition-colors hover:text-white">Privacy Policy</Link>
+            <Link href="#" className="transition-colors hover:text-white">Terms of Service</Link>
           </div>
         </div>
 

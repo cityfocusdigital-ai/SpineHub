@@ -169,6 +169,168 @@ const conditionData = {
     goals: "Maximize functional independence, improve walking speed and safety, and enhance arm and hand usability."
   },
 
+  // === 5. INTEGRATIVE PAIN & SPECIALIZED CARE ===
+  "integrative-pain-care": {
+    title: "Integrative Pain Care",
+    subtitle: "Multimodal Relief: Physiotherapy, Manual Therapy & Holistic Recovery",
+    category: "Integrative Pain Care",
+    heroImage: "/cer.png",
+    description: "An evidence-based multimodal approach combining clinical physiotherapy, gentle joint mobilization, chiropractic alignment, osteopathy, and supportive naturopathy techniques tailored to your individual tolerance.",
+    symptoms: [
+      "Chronic full-body stiffness and muscular soreness",
+      "Persistent neck, shoulder, and lower back fatigue",
+      "Stress-related tension headaches and muscle spasm",
+      "Stiffness not responding adequately to single-modality care"
+    ],
+    causes: [
+      "Prolonged sedentary posture and biomechanical strain",
+      "Myofascial trigger points and soft-tissue restrictions",
+      "Chronic neuromuscular tension patterns",
+      "Spinal segmental hypo-mobility and alignment stress"
+    ],
+    redFlags: [
+      "Unexplained fever or significant unintended weight loss",
+      "Progressive neurological numbness or limb weakness",
+      "Sudden severe pain following acute physical trauma"
+    ],
+    approach: "Whole-person clinical assessment combining gentle manual releases, postural corrections, advanced modalities (TECAR/Laser), and restorative movement therapy.",
+    treatments: [
+      { name: "Manual & Osteopathic Therapy", desc: "Myofascial release, trigger point deactivation, and gentle joint unwinding." },
+      { name: "Chiropractic Mobilization", desc: "Restoring segmental spinal biomechanics and joint play." },
+      { name: "Advanced Modality Therapy", desc: "Non-invasive TECAR, shockwave, or laser for deep cellular recovery." },
+      { name: "Ergonomic & Lifestyle Guidance", desc: "Workstation setup, sleep ergonomics, and stress-calming movements." }
+    ],
+    goals: "Relieve chronic tension, restore comfortable movement mechanics, and build long-term musculoskeletal wellness."
+  },
+  "posture-pain": {
+    title: "Posture-Related Pain & Strain",
+    subtitle: "Ergonomic Alignment & Core Postural Endurance",
+    category: "Spine & Nerve",
+    heroImage: "/cer.png",
+    description: "Prolonged desk work, screen posture, and forward-head tilt overload the cervical and thoracic spine, causing persistent upper back aching, neck tension, and lumbar fatigue.",
+    symptoms: [
+      "Aching between shoulder blades after prolonged sitting",
+      "Neck tension that worsens toward the end of the day",
+      "Lower back tiredness and inability to sit upright comfortably",
+      "Shallow breathing and rounded shoulders"
+    ],
+    causes: [
+      "Sustained desk and computer workstation posture",
+      "Weak deep neck flexors and middle trapezius muscles",
+      "Tight pectoral and hip flexor muscle groups",
+      "Improper monitor height or chair lumbar support"
+    ],
+    redFlags: [
+      "Shooting electrical sensations radiating into hands or legs",
+      "Sudden loss of hand dexterity or grip strength",
+      "Severe night pain unaffected by rest"
+    ],
+    approach: "Ergonomic workstation correction, thoracic spine extension mobilization, pectoral stretching, and scapular stabilizer strengthening.",
+    treatments: [
+      { name: "Thoracic & Ribcage Mobilization", desc: "Unlocking mid-back stiffness to relieve compensatory neck strain." },
+      { name: "Postural Chain Strengthening", desc: "Activating rhomboids, lower traps, and deep cervical flexors." },
+      { name: "Ergonomic Desk Consultation", desc: "Practical adjustments to chair, desk, monitor, and keyboard setup." },
+      { name: "Micro-Break Movement Protocols", desc: "Desk-side mobility exercises to prevent posture fatigue." }
+    ],
+    goals: "Eradicate end-of-day postural aching, restore upright alignment, and build fatigue-resistant postural endurance."
+  },
+  "spine-rehabilitation": {
+    title: "Spine Rehabilitation",
+    subtitle: "Targeted Spine, Disc & Postural Recovery",
+    category: "Spine & Nerve",
+    heroImage: "/aman.png",
+    description: "Specialized clinical rehabilitation for lumbar and cervical spine pain, slipped discs, sciatica, degenerative changes, and postural strain.",
+    symptoms: [
+      "Persistent lower back or neck aching",
+      "Sharp pain with bending, lifting, or prolonged sitting",
+      "Radiating leg or arm numbness and tingling",
+      "Morning stiffness and limited spinal mobility"
+    ],
+    causes: [
+      "Disc herniation or bulge pressing on nerve roots",
+      "Cervical or lumbar spondylosis and facet stiffness",
+      "Prolonged desk sitting and postural imbalances",
+      "Core muscular weakness and improper lifting biomechanics"
+    ],
+    redFlags: [
+      "Sudden loss of bowel or bladder control",
+      "Progressive foot drop or leg weakness",
+      "Unremitting severe pain at rest or night fever"
+    ],
+    approach: "Directional preference exercises (McKenzie MDT), gentle non-surgical decompression, manual therapy, and deep core strengthening.",
+    treatments: [
+      { name: "Spine Assessment & Directional Therapy", desc: "Identifying movements that centralize and reduce pain." },
+      { name: "Spinal Decompression Support", desc: "Relieving pressure on pinched nerves and discs." },
+      { name: "Core & Pelvic Stabilization", desc: "Strengthening deep postural muscles for spinal protection." },
+      { name: "Postural & Ergonomic Coaching", desc: "Daily activity and work-station modifications." }
+    ],
+    goals: "Eliminate nerve and back pain, restore full spinal flexibility, and prevent recurrent flare-ups."
+  },
+  "joint-rehab": {
+    title: "Joint & Musculoskeletal Rehabilitation",
+    subtitle: "Knee, Shoulder, Hip & Orthopaedic Recovery",
+    category: "Joint & Sports Rehab",
+    heroImage: "/sp.png",
+    description: "Structured recovery programmes for knee osteoarthritis, rotator cuff tears, hip bursitis, ligament sprains, and post-surgical rehabilitation.",
+    symptoms: [
+      "Joint stiffness after sitting or upon waking",
+      "Pain when climbing stairs, squatting, or lifting overhead",
+      "Crepitus, grinding, or popping sensations",
+      "Joint instability and reduced muscular strength"
+    ],
+    causes: [
+      "Age-related cartilage wear or osteoarthritis",
+      "Sports injuries, ligament sprains, or meniscus tears",
+      "Post-operative joint replacement or arthroscopy recovery",
+      "Tendon overload and muscular imbalances"
+    ],
+    redFlags: [
+      "Hot, severely red and swollen joint with fever",
+      "Complete inability to bear weight",
+      "Sudden calf pain or swelling (DVT warning)"
+    ],
+    approach: "Targeted joint unloading, muscular kinetic chain strengthening, joint mobilization, and functional movement retraining.",
+    treatments: [
+      { name: "Kinetic Chain Strengthening", desc: "Building shock-absorbing muscle support around joints." },
+      { name: "Joint Mobilization & Glides", desc: "Restoring capsular mobility and range of motion." },
+      { name: "Gait & Functional Training", desc: "Optimizing walking symmetry and stair climbing." },
+      { name: "Sports Recovery & Conditioning", desc: "Safe progressive return to physical activity." }
+    ],
+    goals: "Relieve joint pain, restore comfortable full range of motion, and rebuild joint stability."
+  },
+  "neuro-rehabilitation": {
+    title: "Neuro Rehabilitation",
+    subtitle: "Neuroplasticity, Functional Mobility & Gait Training",
+    category: "Neurological Rehab",
+    heroImage: "/ner.png",
+    description: "Goal-directed rehabilitation harnessing neuroplasticity for patients recovering from stroke, paralysis, neuropathy, or balance impairments.",
+    symptoms: [
+      "One-sided weakness, paralysis, or hemiparesis",
+      "Unsteady walking gait and loss of balance",
+      "Reduced upper limb coordination and hand grip",
+      "Post-stroke muscle stiffness or spasticity"
+    ],
+    causes: [
+      "Ischemic or hemorrhagic stroke",
+      "Transient ischemic attacks (TIA)",
+      "Peripheral neuropathy and sensory deficits",
+      "Spinal cord or nerve conduction disorders"
+    ],
+    redFlags: [
+      "Sudden new facial drooping or slurred speech",
+      "Severe acute headache or loss of consciousness",
+      "Uncontrolled blood pressure spikes"
+    ],
+    approach: "Repetitive task-oriented motor retraining, balance and sensory integration, gait retraining, and adaptive daily living training.",
+    treatments: [
+      { name: "Neuro Gait & Mobility Retraining", desc: "Practicing upright safe walking and transfers." },
+      { name: "Motor Control & Task Practice", desc: "Re-educating arm reaching, grasp, and coordination." },
+      { name: "Spasticity & Tone Management", desc: "Gentle sustained stretching and functional splinting." },
+      { name: "Balance & Proprioceptive Work", desc: "Fall prevention and equilibrium stability exercises." }
+    ],
+    goals: "Maximize functional independence, improve walking safety, and enhance quality of life."
+  },
+
   // === DEFAULT FALLBACK FOR ALL OTHER CONDITIONS ===
   "default": {
     title: "Specialized Rehabilitation",

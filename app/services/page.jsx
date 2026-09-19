@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 
 const services = [
   {
@@ -65,7 +66,7 @@ export default function ServicesPage() {
           
           {/* Breadcrumb Navigation */}
           <div className="flex items-center justify-center gap-2 text-blue-200 text-sm md:text-base font-medium">
-            <span className="hover:text-white cursor-pointer transition-colors">Home</span>
+            <Link href="/" className="hover:text-white cursor-pointer transition-colors">Home</Link>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
@@ -120,12 +121,12 @@ export default function ServicesPage() {
                     {service.description}
                   </p>
                   
-                  <button className="w-full mt-auto bg-slate-50 text-[#0f172a] border border-slate-200 py-3.5 px-6 rounded-xl font-semibold text-sm uppercase tracking-wider hover:bg-[#0f172a] hover:text-white hover:border-[#0f172a] transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg">
+                  <Link href="/contact" className="w-full mt-auto bg-slate-50 text-[#0f172a] border border-slate-200 py-3.5 px-6 rounded-xl font-semibold text-sm uppercase tracking-wider hover:bg-[#0f172a] hover:text-white hover:border-[#0f172a] transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg">
                     Check Suitability
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </button>
+                  </Link>
                 </div>
                 
                 {/* Subtle Glow Effect on Hover */}
@@ -149,12 +150,12 @@ export default function ServicesPage() {
             Our team of specialists is here to guide you through every step of your rehabilitation journey with personalized care plans.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-yellow-500 text-[#0f172a] py-4 px-10 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all duration-300 shadow-[0_0_20px_rgba(234,179,8,0.3)] hover:shadow-[0_0_30px_rgba(234,179,8,0.5)] transform hover:-translate-y-1">
-              Book Free Assessment
-            </button>
-            <button className="bg-transparent border-2 border-blue-400 text-blue-100 py-4 px-10 rounded-full font-bold text-lg hover:bg-blue-900 hover:border-blue-300 transition-all duration-300">
+            <Link href="/contact" className="inline-flex items-center justify-center bg-yellow-500 text-[#0f172a] py-4 px-10 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all duration-300 shadow-[0_0_20px_rgba(234,179,8,0.3)] hover:shadow-[0_0_30px_rgba(234,179,8,0.5)] transform hover:-translate-y-1">
+              Book Assessment
+            </Link>
+            <Link href="/contact" className="inline-flex items-center justify-center bg-transparent border-2 border-blue-400 text-blue-100 py-4 px-10 rounded-full font-bold text-lg hover:bg-blue-900 hover:border-blue-300 transition-all duration-300">
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </section>

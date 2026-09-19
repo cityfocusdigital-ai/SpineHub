@@ -66,7 +66,7 @@ export default function HomePage() {
 
   return (
     <div
-      className={`${fraunces.variable} ${manrope.variable} relative min-h-screen bg-[#bac1c8] selection:bg-[#D6C299] selection:text-white`}
+      className={`${fraunces.variable} ${manrope.variable} relative min-h-screen bg-slate-50 selection:bg-[#D4AF37] selection:text-[rgb(20,42,98)]`}
       style={{ fontFamily: 'var(--font-body)' }}
     >
       {/* Global Styles for Smooth Scroll */}
@@ -100,10 +100,15 @@ export default function HomePage() {
           <motion.div variants={containerVariants} initial="hidden" animate="show">
             <motion.div variants={itemVariants} className="flex items-center gap-3 mb-7">
               <span className="w-8 h-[1.5px] bg-[#D6C299]" />
-              <p className="flex items-center gap-1.5 text-white/90 text-sm font-medium">
+              <a 
+                href="https://maps.app.goo.gl/3yBJLrYM5BcRdoX87"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-white/90 text-sm font-medium hover:text-[#D6C299] transition-colors"
+              >
                 <MapPin size={14} className="text-[#D6C299]" />
                 Borivali West, Mumbai
-              </p>
+              </a>
             </motion.div>
 
             <motion.h1
@@ -123,9 +128,12 @@ export default function HomePage() {
             </motion.p>
 
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row sm:items-start gap-4 mb-10">
-              <button className="px-7 py-3.5 bg-[#f5a70b] hover:bg-[#ffa600] text-[#ffffff] font-semibold rounded-full transition-colors shadow-lg shadow-[#D6C299]/20">
+              <Link 
+                href="/contact"
+                className="px-7 py-3.5 bg-[#f5a70b] hover:bg-[#ffa600] text-[#ffffff] font-semibold rounded-full transition-colors shadow-lg shadow-[#D6C299]/20 inline-block text-center"
+              >
                 Book an Assessment
-              </button>
+              </Link>
 
               <div>
                 <div className="flex rounded-full border border-white/30 overflow-hidden bg-white/5 backdrop-blur-sm">
@@ -219,7 +227,7 @@ export default function HomePage() {
 
 
       {/* Rest of the page sections */}
-      <div id="explore" className="bg-[#004899]">
+      <div id="explore">
         <CarePathways />
       </div>
       <WhyChooseus />
